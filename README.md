@@ -2,7 +2,7 @@
 show the meteo info for a specific location
 
 We will follow [figma](https://www.figma.com/file/GPQcB8SKX8XqOfWA3T0o0r/UX%26Devs?node-id=6%3A2) design.
-We will use [Trello]() to check and follow each other work.
+We will use [Trello](https://trello.com/b/Ufbm2Ah0/android5team1forecastapp) to check and follow each other work.
 
 ### This app has 4 screens:
  - The main screen is a summary of weather for a specific location for today and the next 5 days 
