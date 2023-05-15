@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="co.develhope.meteoapp.HomeScreen"
+        android:label="Home Screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_todayScreen"
+            app:destination="@id/todayScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/todayScreen"
+        android:name="co.develhope.meteoapp.TodayScreen"
+        android:label="Today Screen" >
+        <action
+            android:id="@+id/action_todayScreen_to_tomorrowScreen"
+            app:destination="@id/tomorrowScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tomorrowScreen"
+        android:name="co.develhope.meteoapp.TomorrowScreen"
+        android:label="Tomorrow Screen" >
+        <action
+            android:id="@+id/action_tomorrowScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="co.develhope.meteoapp.SearchScreen"
+        android:label="Search Screen" >
+        <action
+            android:id="@+id/action_searchScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+
+</navigation>
