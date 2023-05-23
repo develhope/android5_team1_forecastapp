@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">meteoapp</string>
+    <string name="palermo_sic">Palermo, Sicilia</string>
+    <string name="prossimi_5">PROSSIMI 5 GIORNI</string>
 </resources>
