@@ -29,7 +29,14 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+feature/home-screen
+    buildFeatures{
+        viewBinding true
+    }
+}
+=======
     namespace 'co.develhope.meteoapp'
+ develop
 
     buildFeatures {
         viewBinding=true
