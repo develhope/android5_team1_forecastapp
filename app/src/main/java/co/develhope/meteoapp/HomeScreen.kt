@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.databinding.HomeScreenBinding
 
+
+
 class HomeScreen : Fragment() {
     private lateinit var binding : HomeScreenBinding
-
-class HomeScreen : Fragment() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -41,7 +40,5 @@ class HomeScreen : Fragment() {
         )
         binding.homeList.layoutManager = LinearLayoutManager(context)
         binding.homeList.adapter = HomeScreenAdapter(weatherInfoList)
-    }
-        return inflater.inflate(R.layout.home_screen, container, false)
     }
 }

@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <string name="app_name">METEO</string>
     <string name="palermo_sic">Palermo, Sicilia</string>
     <string name="prossimi_5">PROSSIMI 5 GIORNI</string>
@@ -6,3 +8,4 @@
     <string name="Today">Today</string>
     <string name="Tomorrow">Tomorrow</string>
     <string name="Search">Search</string>
+</resources>
