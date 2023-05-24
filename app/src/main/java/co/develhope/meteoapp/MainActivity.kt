@@ -37,5 +37,4 @@ class MainActivity : AppCompatActivity() {
             return@setOnItemSelectedListener true
         }
     }
-    //COmment
 }

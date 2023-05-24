@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">METEO</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_message">C’è stato un problema con il caricamento dei tuoi dati. Verifica la tua rete e riprova.</string>
+
     <string name="home">Home</string>
     <string name="Today">Today</string>
     <string name="Tomorrow">Tomorrow</string>
     <string name="Search">Search</string>
+    <string name="riprova">Riprova</string>
 </resources>
