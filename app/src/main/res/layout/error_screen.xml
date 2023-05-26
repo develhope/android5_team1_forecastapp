@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F0EFFF"
-    tools:context=".ErrorScreen">
+    tools:context=".ErrorScreen"
+    android:gravity="center"
+    android:orientation="vertical">
 
 
     <ImageView
         android:id="@+id/error_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/sorry_svg" />
+        android:src="@drawable/sorry_svg"
+        android:scaleType="centerCrop"/>
 
     <ImageView
         android:id="@+id/error_shadow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/error_image"
-        android:src="@drawable/sorry_shadow"/>
+        android:src="@drawable/sorry_shadow" />
 
     <TextView
         android:id="@+id/error_message"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/error_shadow"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="@string/error_message"
@@ -36,13 +35,11 @@
 
     <Button
         android:id="@+id/retry_button"
-        android:layout_width="307dp"
-        android:layout_height="43dp"
-        android:layout_below="@+id/error_message"
-        android:layout_centerHorizontal="true"
-        android:shadowColor="@color/purple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple"
         android:layout_marginTop="20dp"
         android:text="@string/riprova" />
 
 
-</RelativeLayout>
+</LinearLayout>
