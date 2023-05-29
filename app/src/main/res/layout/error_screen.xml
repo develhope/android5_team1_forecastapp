@@ -9,6 +9,11 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <!--
+    TODO
+    Font family: Inter
+    Line height: 19sp
+    -->
 
     <ImageView
         android:id="@+id/error_image"
@@ -43,3 +48,4 @@
 
 
 </LinearLayout>
+
