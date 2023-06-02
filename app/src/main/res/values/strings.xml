@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">meteoapp</string>
+    <string name="palermo_sic">Palermo, Sicilia</string>
+
+    <string name="oggi_domeni">Domenica 10 settembre</string>
+    <string name="some_id">11:00</string>
+    <string name="some_id2">31°</string>
+    <string name="some_id3">0%</string>
+    <string name="percepita">Percepita</string>
+    <string name="some_id4">45°</string>
+    <string name="indice_uv">Indice UV</string>
+    <string name="some_id5">5/10</string>
+    <string name="umidit_">Umidità</string>
+    <string name="some_id6">60%</string>
+    <string name="vento">Vento</string>
+    <string name="sse_7km_h">SSE 7km/h</string>
+    <string name="copertura">Copertura</string>
+    <string name="some_id7">24%</string>
+    <string name="pioggia">Pioggia</string>
+    <string name="cm">0cm</string>
+
 </resources>
