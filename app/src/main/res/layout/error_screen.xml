@@ -14,9 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:paddingStart="60dp"
-        android:paddingEnd="20dp"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:paddingStart="@dimen/padding_start"
+        android:paddingEnd="@dimen/padding_end"
         android:src="@drawable/sorry_svg" />
 
     <ImageView
@@ -32,14 +32,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/error_shadow"
         android:layout_centerInParent="true"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginTop="@dimen/marginTop"
         android:gravity="center"
-        android:lineSpacingExtra="3sp"
         android:text="@string/error_message"
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="@dimen/textSize" />
 
     <Button
         android:id="@+id/retry_button"
@@ -47,9 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/error_message"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginEnd="37dp"
+        android:layout_marginTop="@dimen/textMarginTop"
         android:text="@string/riprova"
         android:backgroundTint="@color/night_blue" />
 
