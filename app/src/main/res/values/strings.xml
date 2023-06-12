@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">METEO</string>
-    <string name="error_message">      C’è stato un problema con
-        il caricamento dei tuoi dati.
-        Verifica la tua rete e riprova.
-    </string>
+    <string name="error_message">C’è stato un problema con\nil caricamento dei tuoi dati.\nVerifica la tua rete e riprova.</string>
     <string name="palermo_sic">Palermo, Sicilia</string>
     <string name="prossimi_5">PROSSIMI 5 GIORNI</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="home">Home</string>
-    <string name="Today">Today</string>
-    <string name="Tomorrow">Tomorrow</string>
-    <string name="Search">Search</string>
-    <string name="riprova">Riprova</string>
+
+
+    <string name="Home">Home</string>
+    <string name="Oggi">Oggi</string>
+    <string name="Domani">Domani</string>
+    <string name="Cerca">Cerca</string>
+    <string name="Riprova">Riprova</string>
 </resources>
