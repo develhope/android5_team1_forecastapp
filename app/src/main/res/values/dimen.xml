@@ -5,9 +5,8 @@
     <dimen name="big_text_home">20sp</dimen>
     <dimen name="small_text_home">14sp</dimen>
 
-
     <!-- ImageView for error_image -->
-    <dimen  name="layout_marginTop">150dp</dimen>
+    <dimen name="layout_marginTop">150dp</dimen>
     <dimen name="padding_start">60dp</dimen>
     <dimen name="padding_end">20dp</dimen>
 
@@ -17,5 +16,4 @@
 
     <!-- TextView for retry_button -->
     <dimen name="textMarginTop">20dp</dimen>
-
 </resources>
