@@ -8,12 +8,13 @@
     <!-- ImageView for error_image -->
     <dimen name="layout_marginTop">150dp</dimen>
     <dimen name="padding_start">60dp</dimen>
-    <dimen name="padding_end">20dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
 
     <!-- TextView for error_message -->
-    <dimen name="marginTop">20dp</dimen>
     <dimen name="textSize">17sp</dimen>
 
-    <!-- TextView for retry_button -->
-    <dimen name="textMarginTop">20dp</dimen>
+
+    <!-- Button dimen -->
+    <dimen name="padding">80dp</dimen>
+
 </resources>
