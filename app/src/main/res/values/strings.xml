@@ -12,4 +12,18 @@
     <string name="Domani">Domani</string>
     <string name="Cerca">Cerca</string>
     <string name="Riprova">Riprova</string>
+
+
+    <!-- ENG VERSION -->
+    <string name="app_name_english">METEO</string>
+    <string name="error_message_english">There was a problem with\nloading your data.\nPlease check your network and try again.</string>
+    <string name="palermo_sic_english">Palermo, Sicily</string>
+    <string name="prossimi_5_english">NEXT 5 DAYS</string>
+    <string name="hello_blank_fragment_english">Hello blank fragment</string>
+
+    <string name="Home_english">Home</string>
+    <string name="Oggi_english">Today</string>
+    <string name="Domani_english">Tomorrow</string>
+    <string name="Cerca_english">Search</string>
+    <string name="Riprova_english">Retry</string>
 </resources>
