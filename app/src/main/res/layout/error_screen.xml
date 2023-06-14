@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EFFF"
+    android:orientation="horizontal"
+    tools:context=".ErrorScreen">
+
+
+    <ImageView
+        android:id="@+id/error_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:paddingStart="@dimen/padding_start"
+        android:paddingEnd="@dimen/padding_end"
+        android:src="@drawable/sorry_svg" />
+
+    <ImageView
+        android:id="@+id/error_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_image"
+        android:src="@drawable/sorry_shadow" />
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_shadow"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/marginTop"
+        android:gravity="center"
+        android:text="@string/error_message"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize" />
+
+    <Button
+        android:id="@+id/retry_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/textMarginTop"
+        android:text="@string/riprova"
+        android:backgroundTint="@color/night_blue" />
+
+</RelativeLayout>

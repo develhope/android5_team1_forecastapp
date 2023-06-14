@@ -4,4 +4,17 @@
     <dimen name="date_home">14sp</dimen>
     <dimen name="big_text_home">20sp</dimen>
     <dimen name="small_text_home">14sp</dimen>
+
+    <!-- ImageView for error_image -->
+    <dimen name="layout_marginTop">150dp</dimen>
+    <dimen name="padding_start">60dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+
+    <!-- TextView for error_message -->
+    <dimen name="textSize">17sp</dimen>
+
+
+    <!-- Button dimen -->
+    <dimen name="padding">80dp</dimen>
+
 </resources>
