@@ -8,7 +8,7 @@
     <!-- ImageView for error_image -->
     <dimen name="layout_marginTop">150dp</dimen>
     <dimen name="padding_start">60dp</dimen>
-    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_20">10dp</dimen>
 
     <!-- TextView for error_message -->
     <dimen name="textSize">17sp</dimen>
