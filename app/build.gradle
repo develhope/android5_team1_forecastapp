@@ -6,14 +6,12 @@ plugins {
 android {
     compileSdk 33
 
-
     defaultConfig {
         applicationId "co.develhope.meteoapp"
-        minSdk 23
-        targetSdk 33
+        minSdkVersion 23
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -23,22 +21,23 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    namespace 'co.develhope.meteoapp'
 
     buildFeatures {
         viewBinding = true
-
-    buildFeatures{
-        viewBinding true
     }
+
+    namespace 'co.develhope.meteoapp'
 }
+
 dependencies {
     implementation 'androidx.core:core-ktx:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
