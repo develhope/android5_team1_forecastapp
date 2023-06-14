@@ -4,22 +4,22 @@
 
     <item
         android:id="@+id/homeScreenNavigation"
-        android:title="@string/home"
+        android:title="@string/Home"
         android:icon="@drawable/icon_home_screen" />
 
     <item
         android:id="@+id/todayScreenNavigation"
-        android:title="@string/Today"
+        android:title="@string/Oggi"
         android:icon="@drawable/icon_today_screen" />
 
     <item
         android:id="@+id/tomorrowScreenNavigation"
-        android:title="@string/Tomorrow"
+        android:title="@string/Domani"
         android:icon="@drawable/icon_tomorrow_screen"/>
 
     <item
         android:id="@+id/searchScreenNavigation"
-        android:title="@string/Search"
+        android:title="@string/Cerca"
         android:icon="@drawable/icon_search_screen"/>
 
 </menu>
