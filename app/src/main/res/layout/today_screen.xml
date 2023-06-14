@@ -6,48 +6,64 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F0EFFF"
-    android:overScrollMode="always"
-    >
-<LinearLayout
-    android:id="@+id/home_screen_first"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginBottom="70dp"
     >
 
-    <TextView
-        android:id="@+id/palermo_sic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/palermo_sic"
-        android:textAppearance="@style/palermo_sic"
-        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/oggi_domeni"
-        android:layout_width="184dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="2dp"
-        android:text="@string/oggi_domeni"
-        android:textAppearance="@style/oggi_domeni" />
+        <LinearLayout
+            android:id="@+id/home_screen_first_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
+            <TextView
+                android:id="@+id/palermo_sic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/palermo_sic"
+                android:textAppearance="@style/palermo_sic"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="54dp"
+                >
+                <TextView
+                    android:layout_width="184dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Oggi,"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/oggi_domeni" />
+                <TextView
+                    android:id="@+id/oggi_domeni"
+                    android:layout_width="184dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="24dp"
+                    android:textStyle="bold"
+                    android:text="@string/oggi_domeni"
+                    android:textAppearance="@style/oggi_domeni" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                tools:itemCount="5" />
 
-</LinearLayout>
-
-<androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/todayRecyclerView"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:itemCount="5"
-    />
-
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </LinearLayout>

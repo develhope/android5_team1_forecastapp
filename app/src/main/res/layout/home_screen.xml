@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="always"
+    tools:context=".HomeScreen"
+    android:background="@drawable/home_background">
+
+    <TextView
+        android:id="@+id/palermo_sic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/palermo_sic"
+        android:textAppearance="@style/palermo_sic"
+        android:gravity="top"
+        />
+
+    <GridLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/frame_home">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:paddingStart="18dp"
+            android:paddingTop="18dp"
+            android:text="Oggi"
+            android:textColor="@color/white"
+            android:textSize="@dimen/weekday_home" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="72dp"
+            android:paddingStart="18dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="18dp"
+            android:text="10/09"
+            android:textColor="@color/white"
+            android:textSize="@dimen/date_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:paddingTop="18dp"
+            android:text="22°"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_text_home" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:paddingTop="3dp"
+            android:text="min"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="18dp"
+            android:text="31°"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big_text_home" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="72dp"
+            android:paddingTop="3dp"
+            android:text="max"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_text_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text="12kmh"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_text_home" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="72dp"
+                android:paddingTop="3dp"
+                android:text="vento"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text="0 mm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big_text_home" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:text="precip."
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_home" />
+
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/sun"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/prossimi_5_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/prossimi_5"
+        android:textAppearance="@style/prossimi_5"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        tools:listitem="@layout/weather_info_home"
+        />
+
+</LinearLayout>
