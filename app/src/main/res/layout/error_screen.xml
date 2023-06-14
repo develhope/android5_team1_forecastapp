@@ -6,17 +6,15 @@
     android:layout_height="match_parent"
     android:background="#F0EFFF"
     android:orientation="horizontal"
-    tools:context=".ErrorScreen">
+    tools:context=".ErrorScreen"
+    android:layout_marginTop="-150dp">
 
 
     <ImageView
         android:id="@+id/error_image"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/layout_marginTop"
-        android:paddingStart="@dimen/padding_start"
-        android:paddingEnd="@dimen/padding_end"
+        android:layout_centerInParent="true"
         android:src="@drawable/sorry_svg" />
 
     <ImageView
@@ -32,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/error_shadow"
         android:layout_centerInParent="true"
-        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginTop="@dimen/margin_20"
         android:gravity="center"
         android:text="@string/error_message"
         android:textColor="@color/black"
@@ -40,12 +38,14 @@
 
     <Button
         android:id="@+id/retry_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/error_message"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/textMarginTop"
-        android:text="@string/riprova"
-        android:backgroundTint="@color/night_blue" />
+        android:layout_marginTop="@dimen/margin_20"
+        android:backgroundTint="@color/night_blue"
+        android:text="@string/Riprova"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"/>
 
 </RelativeLayout>
