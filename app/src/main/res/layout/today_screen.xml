@@ -29,32 +29,34 @@
                 android:layout_marginTop="42dp"
                 android:layout_marginEnd="24dp"
                 android:text="@string/palermo_sic"
-                android:textAppearance="@style/palermo_sic"
-                />
+                android:textAppearance="@style/palermo_sic" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginBottom="54dp"
-                >
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="184dp"
                     android:layout_height="25dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="2dp"
                     android:text="Oggi,"
+                    android:textAppearance="@style/oggi_domeni"
                     android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/oggi_domeni" />
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/oggi_domeni"
                     android:layout_width="184dp"
                     android:layout_height="17dp"
                     android:layout_marginStart="24dp"
-                    android:textStyle="bold"
                     android:text="@string/oggi_domeni"
-                    android:textAppearance="@style/oggi_domeni" />
+                    android:textAppearance="@style/oggi_domeni"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
