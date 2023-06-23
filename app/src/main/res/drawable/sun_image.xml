@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="24.61dp"
+    android:height="24.42dp"
+    android:viewportWidth="24.61"
+    android:viewportHeight="24.42"
+    >
+    <group tools:ignore="ExtraText">
+        <clip-path
+            android:pathData="M0 0H24.6063V24.4197H0V0Z"
+            tools:ignore="VectorRaster" />
+            <!--need to remove this "tools ignore" and fix-->
+
+        <group
+            android:translateX="2.174"
+            android:translateY="-0.067"
+            android:pivotX="12.303"
+            android:pivotY="12.21"
+            android:scaleX="3.569"
+            android:scaleY="4.407"
+            android:rotation="117.739"
+            >
+            <path
+                android:pathData="M0 0V24.4197H24.6063V0"
+                >
+                <aapt:attr name="android:fillColor">
+                    <gradient
+                        android:type="radial"
+                        android:centerX="12.303"
+                        android:centerY="12.21"
+                        android:gradientRadius="6.152"
+                        >
+                        <item
+                            android:color="#FFD13D"
+                            android:offset="0.172"
+                            />
+                        <item
+                            android:color="#D89A29"
+                            android:offset="1"
+                            />
+                    </gradient>
+                </aapt:attr>
+            </path>
+        </group>
+    </group>
+</vector>
