@@ -35,11 +35,6 @@ class MainActivity : AppCompatActivity() {
             TodayInfo("00:00",R.drawable.sun_image,"35°","18%","45°","5/10","20%","SSE 7km/h","30%","0cm")
 
         )
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = TodayInfoAdapter(todayInfoList)
-
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
