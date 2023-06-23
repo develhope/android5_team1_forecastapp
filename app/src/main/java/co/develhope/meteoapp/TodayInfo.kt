@@ -3,7 +3,7 @@ package co.develhope.meteoapp
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 
-data class TodayInfo(
+data class WeatherConditions(
     val hour: String,
     val weather: Int,
     val temperature: String,
