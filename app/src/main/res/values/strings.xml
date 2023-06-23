@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <string name="oggi_domeni">Domenica 10 settembre</string>
+    <string name="some_id">11:00</string>
+    <string name="some_id2">31°</string>
+    <string name="some_id3">0%</string>
+    <string name="percepita">Percepita</string>
+    <string name="some_id4">45°</string>
+    <string name="indice_uv">Indice UV</string>
+    <string name="some_id5">5/10</string>
+    <string name="umidit_">Umidità</string>
+    <string name="some_id6">60%</string>
+    <string name="vento">Vento</string>
+    <string name="sse_7km_h">SSE 7km/h</string>
+    <string name="copertura">Copertura</string>
+    <string name="some_id7">24%</string>
+    <string name="pioggia">Pioggia</string>
+    <string name="cm">0cm</string>
+
+
+
     <string name="app_name">METEO</string>
     <string name="error_message">C’è stato un problema con\nil caricamento dei tuoi dati.\nVerifica la tua rete e riprova.</string>
     <string name="palermo_sic">Palermo, Sicilia</string>
@@ -14,7 +35,6 @@
     <string name="Riprova">Riprova</string>
 
 
-    <!-- ENG VERSION -->
     <string name="app_name_english">METEO</string>
     <string name="error_message_english">There was a problem with\nloading your data.\nPlease check your network and try again.</string>
     <string name="palermo_sic_english">Palermo, Sicily</string>
@@ -27,3 +47,4 @@
     <string name="Cerca_english">Search</string>
     <string name="Riprova_english">Retry</string>
 </resources>
+
