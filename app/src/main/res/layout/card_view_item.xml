@@ -8,8 +8,8 @@
         android:id="@+id/frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginStart="@dimen/margin_start_frame"
+        android:layout_marginTop="@dimen/margin_top_frame"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
+                android:paddingTop="@dimen/padding_top_textview"
                 android:text="@string/umidit_"
                 android:textAppearance="@style/umidit_" />
 
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
+                android:paddingTop="@dimen/padding_top_textview2"
                 android:text="@string/some_id6"
                 android:textAppearance="@style/some_id6" />
         </LinearLayout>
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
+                android:paddingTop="@dimen/padding_top_textview"
                 android:text="@string/vento"
                 android:textAppearance="@style/vento" />
 
@@ -97,7 +97,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
+                android:paddingTop="@dimen/padding_top_textview2"
                 android:text="@string/sse_7km_h"
                 android:textAppearance="@style/sse_7km_h" />
         </LinearLayout>
@@ -112,14 +112,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
+                android:paddingTop="@dimen/padding_top_textview"
                 android:text="0 mm"
                 android:textColor="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp"
+                android:paddingTop="@dimen/padding_top_textview2"
                 android:text="precip."
                 android:textColor="@color/white" />
 
@@ -135,14 +135,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
+                android:paddingTop="@dimen/padding_top_textview"
                 android:text="@string/copertura"
                 android:textAppearance="@style/copertura" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
+                android:layout_marginEnd="@dimen/margin_end_texview"
                 android:text="@string/some_id7"
                 android:textAppearance="@style/some_id7" />
         </LinearLayout>
@@ -157,14 +157,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
+                android:paddingTop="@dimen/padding_top_textview"
                 android:text="@string/pioggia"
                 android:textAppearance="@style/pioggia" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp"
+                android:paddingTop="@dimen/padding_top_textview2"
                 android:text="@string/cm"
                 android:textAppearance="@style/cm" />
 
