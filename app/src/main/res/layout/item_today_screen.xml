@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F0EFFF"
+    android:focusable="true">
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_linear"
+            android:layout_marginEnd="@dimen/margin_end_linear"
+            android:layout_marginTop="@dimen/margin_linear"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/home_screen_second_part"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/margin_linear"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/hourTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_textview"
+                    android:layout_marginBottom="@dimen/margin_textview"
+                    android:text="@string/some_id"
+                    android:textAppearance="@style/today_number_style"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/weatherImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_image"
+                    android:layout_marginBottom="@dimen/margin_image"
+                    android:layout_marginStart="@dimen/margin_layout"
+                    android:background="@drawable/sun_image" />
+
+                <TextView
+                    android:id="@+id/temperatureTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_image"
+                    android:layout_marginBottom="@dimen/margin_image"
+                    android:layout_marginStart="@dimen/margin_layout"
+                    android:text="@string/some_id2"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/today_number_style2"
+
+                    />
+
+                <ImageView
+                    android:id="@+id/humidityImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_textview"
+                    android:layout_marginBottom="@dimen/margin_textview"
+                    android:layout_marginStart="@dimen/image_bottom"
+                    android:background="@drawable/humidity_image" />
+
+                <TextView
+                    android:id="@+id/humidityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_image"
+                    android:layout_marginBottom="@dimen/margin_image"
+                    android:layout_marginStart="@dimen/margin_linear"
+                    android:text="@string/some_id3"
+                    android:textAppearance="@style/today_number_style2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/bottomLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_line"
+            android:layout_marginStart="@dimen/margin_start_linear"
+            />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_start_linear"
+                android:layout_marginEnd="@dimen/margin_start_linear"
+                android:elevation="@dimen/margin_image"
+                android:layout_marginTop="@dimen/cardview_top"
+                android:layout_marginBottom="@dimen/margin_layout"
+                app:cardCornerRadius="@dimen/cardview_radius"
+                >
+                <GridLayout
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_column="0"
+                        android:layout_row="0">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/percepita"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin"
+                                android:layout_marginEnd="@dimen/margin2"
+                                android:layout_marginTop="@dimen/margin"
+                                android:layout_marginBottom="@dimen/margin3"
+                                android:text="@string/percepita"
+                                android:textAppearance="@style/percepita" />
+
+                            <TextView
+                                android:id="@+id/percepitaTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin4"
+                                android:layout_marginStart="@dimen/margin"
+                                android:layout_marginEnd="@dimen/margin5"
+                                android:text="@string/some_id4"
+                                android:textAppearance="@style/today_number_style4" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/indice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin"
+                                android:layout_marginEnd="@dimen/margin6"
+                                android:layout_marginBottom="@dimen/margin3"
+                                android:text="@string/indice_uv"
+                                android:textAppearance="@style/indice_uv" />
+
+                            <TextView
+                                android:id="@+id/indiceTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin7"
+                                android:layout_marginBottom="@dimen/margin4"
+                                android:text="@string/some_id5"
+                                android:textAppearance="@style/today_number_style5" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/cardview_top"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:background="@drawable/bottom_line"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_column="0"
+                        android:layout_row="2">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/humidity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin"
+                                android:layout_marginEnd="@dimen/margin8"
+                                android:layout_marginTop="@dimen/margin4"
+                                android:layout_marginBottom="@dimen/margin_image"
+                                android:text="@string/umidit_"
+                                android:textAppearance="@style/umidit_" />
+
+                            <TextView
+                                android:id="@+id/percentualeUmiTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin"
+                                android:layout_marginEnd="@dimen/margin6"
+                                android:layout_marginBottom="@dimen/cardview_top"
+                                android:text="@string/some_id6"
+                                android:textAppearance="@style/today_number_style6" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/vento"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin4"
+                                android:layout_marginEnd="@dimen/margin9"
+                                android:layout_marginBottom="@dimen/margin_image"
+                                android:text="@string/vento"
+                                android:textAppearance="@style/vento" />
+
+                            <TextView
+                                android:id="@+id/ventoTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin4"
+                                android:layout_marginEnd="@dimen/margin10"
+                                android:text="@string/sse_7km_h"
+                                android:textAppearance="@style/sse_7km_h" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_line"
+                        android:layout_marginStart="@dimen/cardview_top"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:layout_column="0"
+                        android:layout_row="3"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_column="0"
+                        android:layout_row="4">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/copertura"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_linear"
+                                android:layout_marginStart="@dimen/cardview_top"
+                                android:layout_marginEnd="@dimen/margin11"
+                                android:layout_marginBottom="@dimen/margin_image"
+                                android:text="@string/copertura"
+                                android:textAppearance="@style/copertura" />
+
+                            <TextView
+                                android:id="@+id/coperturaTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/cardview_top"
+                                android:layout_marginEnd="@dimen/margin5"
+                                android:layout_marginBottom="@dimen/cardview_top"
+                                android:text="@string/some_id7"
+                                android:textAppearance="@style/today_number_style7" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/pioggia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_linear"
+                                android:layout_marginEnd="@dimen/margin12"
+                                android:layout_marginBottom="@dimen/margin_image"
+                                android:text="@string/pioggia"
+                                android:textAppearance="@style/pioggia" />
+
+                            <TextView
+                                android:id="@+id/pioggiaTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin12"
+                                android:layout_marginBottom="@dimen/cardview_top"
+                                android:text="@string/cm"
+                                android:textAppearance="@style/cm" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </GridLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@
         android:layout_marginTop="42dp"
         android:layout_marginEnd="24dp"
         android:text="@string/palermo_sic"
-        android:textAppearance="@style/palermo_sic"
+        android:textAppearance="@style/city_title_style"
         android:gravity="top"
         />
 
@@ -171,7 +171,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginTop="42dp"
         android:text="@string/prossimi_5"
-        android:textAppearance="@style/prossimi_5"
+        android:textAppearance="@style/next_5_days_style"
         />
 
     <androidx.recyclerview.widget.RecyclerView

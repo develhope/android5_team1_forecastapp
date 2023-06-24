@@ -17,4 +17,51 @@
     <!-- Button dimen -->
     <dimen name="padding">80dp</dimen>
 
+
+    <!-- CardViewItem.xml -->
+    <dimen name="margin_start_frame">24dp</dimen>
+    <dimen name="margin_top_frame">22dp</dimen>
+    <dimen name="padding_top_textview">18dp</dimen>
+    <dimen name="margin_end_textview">72dp</dimen>
+    <dimen name="padding_top_textview2">2dp</dimen>
+
+    <!--Header Today Screen -->
+    <dimen name="margin_start">24dp</dimen>
+    <dimen name="margin_top">42dp</dimen>
+    <dimen name="margin_end">24dp</dimen>
+    <dimen name="margin_bottom">54dp</dimen>
+    <dimen name="margin_top_textview">2dp</dimen>
+    <dimen name="textviewSize">20sp</dimen>
+
+    <!--Item Today Screen -->
+    <dimen name="margin_start_linear">24dp</dimen>
+    <dimen name="margin_end_linear">40dp</dimen>
+    <dimen name="margin_linear">10dp</dimen>
+    <dimen name="margin_textview">7dp</dimen>
+    <dimen name="margin_image">4dp</dimen>
+    <dimen name="margin_layout">40dp</dimen>
+    <dimen name="image_bottom">52dp</dimen>
+    <dimen name="cardview_top">20dp</dimen>
+    <dimen name="cardview_radius">8dp</dimen>
+    <dimen name="margin">18dp</dimen>
+    <dimen name="margin2">112dp</dimen>
+    <dimen name="margin3">2dp</dimen>
+    <dimen name="margin4">14dp</dimen>
+    <dimen name="margin5">150dp</dimen>
+    <dimen name="margin6">75dp</dimen>
+    <dimen name="margin7">110dp</dimen>
+    <dimen name="margin8">125dp</dimen>
+    <dimen name="margin9">102dp</dimen>
+    <dimen name="margin10">60dp</dimen>
+    <dimen name="margin11">107dp</dimen>
+    <dimen name="margin12">90dp</dimen>
+
+
+
+
+
+
+
+
+
 </resources>

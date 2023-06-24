@@ -6,18 +6,19 @@
     android:layout_height="match_parent"
     android:background="#F0EFFF"
     android:orientation="horizontal"
-    tools:context=".ErrorScreen">
+    tools:context=".ErrorScreen"
+    android:layout_marginTop="-150dp">
 
 
     <ImageView
         android:id="@+id/error_image"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/layout_marginTop"
         android:paddingStart="@dimen/padding_start"
-        android:paddingEnd="@dimen/padding"
-        android:src="@drawable/sorry_svg" />
+        android:paddingEnd="@dimen/padding" />
+
 
     <ImageView
         android:id="@+id/error_shadow"
@@ -40,12 +41,13 @@
 
     <Button
         android:id="@+id/retry_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/error_message"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_20"
         android:text="@string/Riprova"
         android:backgroundTint="@color/night_blue" />
+
 
 </RelativeLayout>
