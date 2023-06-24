@@ -1,4 +1,4 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import co.develhope.meteoapp.HomeScreenAdapter
+import co.develhope.meteoapp.data.WeatherInfoItem
 import co.develhope.meteoapp.databinding.HomeScreenBinding
 
 

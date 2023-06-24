@@ -10,6 +10,7 @@ import androidx.cardview.widget.CardView
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import co.develhope.meteoapp.data.WeatherConditions
 
 class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherConditions>) : RecyclerView.Adapter<TodayInfoAdapter.TodayInfoViewHolder>()  {
 

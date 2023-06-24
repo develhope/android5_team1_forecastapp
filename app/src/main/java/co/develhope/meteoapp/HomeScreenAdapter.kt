@@ -3,6 +3,7 @@ package co.develhope.meteoapp
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import co.develhope.meteoapp.data.WeatherInfoItem
 import co.develhope.meteoapp.databinding.WeatherInfoHomeBinding
 
 class HomeScreenAdapter(val list: List<WeatherInfoItem>) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {

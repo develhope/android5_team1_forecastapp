@@ -1,10 +1,11 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.ui.search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import co.develhope.meteoapp.R
 
 
 class SearchScreen : Fragment() {

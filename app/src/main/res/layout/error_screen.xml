@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#F0EFFF"
     android:orientation="horizontal"
-    tools:context=".ErrorScreen"
+    tools:context=".ui.error.ErrorScreen"
     android:layout_marginTop="-150dp">
 
 
