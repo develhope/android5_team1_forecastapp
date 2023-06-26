@@ -1,16 +1,17 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import co.develhope.meteoapp.data.WeatherInfoItem
+import co.develhope.meteoapp.network.data.WeatherData
 import co.develhope.meteoapp.databinding.WeatherInfoHomeBinding
 
-class HomeScreenAdapter(val list: List<WeatherInfoItem>) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
+class HomeScreenAdapter(private val list: MutableList<WeatherData> = mutableListOf()) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: WeatherInfoHomeBinding) : RecyclerView.ViewHolder(binding.root){
-        fun onBind(item: WeatherInfoItem){
-            binding.weatherInfoText.text = item.text
+        fun onBind(item: WeatherData){
+
+
         }
     }
 

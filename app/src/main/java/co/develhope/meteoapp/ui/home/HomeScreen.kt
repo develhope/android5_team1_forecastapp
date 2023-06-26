@@ -5,15 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import co.develhope.meteoapp.HomeScreenAdapter
-import co.develhope.meteoapp.data.WeatherInfoItem
+import co.develhope.meteoapp.network.WeatherForecast
 import co.develhope.meteoapp.databinding.HomeScreenBinding
-
+import co.develhope.meteoapp.ui.adapter.HomeScreenAdapter
+import kotlinx.coroutines.launch
 
 
 class HomeScreen : Fragment() {
-    private lateinit var binding : HomeScreenBinding
+    private lateinit var binding: HomeScreenBinding
+    private lateinit var adapter : HomeScreenAdapter
+    private val api = WeatherForecast.api
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -24,23 +29,22 @@ class HomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-
         binding = HomeScreenBinding.inflate(inflater, container, false)
+
+        lifecycleScope.launch {
+
+            val response = api.getWeatherInfo()
+            binding.temperatureMin.text = response.body()?.daily?.temperature_2m_min.toString()
+        }
+
+
+        binding.recyclerHomeView.layoutManager = LinearLayoutManager(context)
+        adapter = HomeScreenAdapter()
+        binding.recyclerHomeView.adapter = adapter
+
+
+
+
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val weatherInfoList = listOf(
-            WeatherInfoItem("Giorno 1" ),
-            WeatherInfoItem("Giorno 2" ),
-            WeatherInfoItem("Giorno 3" ),
-            WeatherInfoItem("Giorno 4" ),
-            WeatherInfoItem("Giorno 5" )
-        )
-        binding.homeList.layoutManager = LinearLayoutManager(context)
-        binding.homeList.adapter = HomeScreenAdapter(weatherInfoList)
     }
 }

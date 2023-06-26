@@ -5,10 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import co.develhope.meteoapp.R
-import co.develhope.meteoapp.TodayInfoAdapter
-import co.develhope.meteoapp.data.WeatherConditions
 import co.develhope.meteoapp.databinding.TodayScreenBinding
 
 
@@ -26,8 +22,8 @@ class TodayScreen : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = TodayScreenBinding.inflate(inflater, container, false)
-        val todayInfoList : ArrayList<WeatherConditions> = arrayListOf(
-            WeatherConditions("11:00",
+        //val todayInfoList : ArrayList<WeatherConditions> = arrayListOf(
+         /*   WeatherConditions("11:00",
                 R.drawable.sun_image,"24°","33%","45°","5/10","23%","SSE 7km/h","30%","0cm"),
             WeatherConditions("12:00",
                 R.drawable.sun_image,"26°","13%","55°","5/10","13%","SSE 7km/h","30%","0cm"),
@@ -56,10 +52,10 @@ class TodayScreen : Fragment() {
             WeatherConditions("00:00",
                 R.drawable.sun_image,"35°","18%","45°","5/10","20%","SSE 7km/h","30%","0cm")
 
-        )
-        val recyclerView = binding.recyclerView
+        )*/
+        /*val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TodayInfoAdapter(todayInfoList)
+        recyclerView.adapter = TodayInfoAdapter(todayInfoList)*/
 
 
         return binding.root

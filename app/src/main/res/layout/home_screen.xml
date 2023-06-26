@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
@@ -38,6 +39,7 @@
             android:layout_column="0"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/today_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
@@ -47,14 +49,13 @@
             android:textColor="@color/white"
             android:textSize="@dimen/weekday_home" />
         <TextView
+            android:id="@+id/data_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginEnd="72dp"
             android:paddingStart="18dp"
             android:paddingTop="3dp"
             android:paddingEnd="18dp"
-            android:text="10/09"
             android:textColor="@color/white"
             android:textSize="@dimen/date_home" />
         </LinearLayout>
@@ -66,11 +67,11 @@
             android:layout_column="1"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/temperature_min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
             android:paddingTop="18dp"
-            android:text="22°"
             android:textColor="@color/white"
             android:textSize="@dimen/big_text_home" />
         <TextView
@@ -90,10 +91,10 @@
             android:layout_column="2"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/temperature_max"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="18dp"
-            android:text="31°"
             android:textColor="@color/white"
             android:textSize="@dimen/big_text_home" />
         <TextView
@@ -175,7 +176,7 @@
         />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/home_list"
+        android:id="@+id/recycler_home_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"

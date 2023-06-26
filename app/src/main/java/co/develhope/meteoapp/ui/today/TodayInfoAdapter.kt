@@ -1,18 +1,7 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.ui.today
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
-import androidx.cardview.widget.CardView
-
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import co.develhope.meteoapp.data.WeatherConditions
-
-class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherConditions>) : RecyclerView.Adapter<TodayInfoAdapter.TodayInfoViewHolder>()  {
+/*
+class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherDataHome>) : RecyclerView.Adapter<TodayInfoAdapter.TodayInfoViewHolder>()  {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodayInfoViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_today_screen, parent, false)
@@ -27,15 +16,16 @@ class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherConditions>) : Re
         val item = todayInfo[position]
         holder.bind(item){
             isAnyItemExpanded(position)
-            item.isExpanded = !item.isExpanded
+            //item.isExpanded = !item.isExpanded
             notifyItemChanged(position, Unit)
         }
     }
 
+*/
 
 
 
-    private fun isAnyItemExpanded(position: Int){
+ /*   private fun isAnyItemExpanded(position: Int){
         val temp = todayInfo.indexOfFirst {
             it.isExpanded
         }
@@ -73,21 +63,21 @@ class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherConditions>) : Re
             val ventoTextView = itemView.findViewById<TextView>(R.id.ventoTextView)
             val coperturaTextView = itemView.findViewById<TextView>(R.id.coperturaTextView)
             val pioggiaTextView = itemView.findViewById<TextView>(R.id.pioggiaTextView)
-            hourTextView.text = todayInfo.hour
+           *//* hourTextView.text = todayInfo.hour
             weatherImageView.setImageResource(todayInfo.weather)
             temperatureTextView.text = todayInfo.temperature
-            humidityTextView.text = todayInfo.humidity
+            humidityTextView.text = todayInfo.humidity*//*
 
             val isExpandable = todayInfo.isExpanded
             expandableCardView.visibility = if (isExpandable) View.VISIBLE else View.GONE
             bottomLine.visibility = if (isExpandable) View.GONE else View.VISIBLE
 
-            percepitaTextView.text = todayInfo.percepita
+         *//*   percepitaTextView.text = todayInfo.percepita
             indiceTextView.text = todayInfo.indice
             percentualeUmiTextView.text = todayInfo.umidita
             ventoTextView.text = todayInfo.vento
             coperturaTextView.text = todayInfo.copertura
-            pioggiaTextView.text = todayInfo.pioggia
+            pioggiaTextView.text = todayInfo.pioggia*//*
 
             linearLayout.setOnClickListener {
                 clickListener(todayInfo)
@@ -103,4 +93,4 @@ class TodayInfoAdapter(private val todayInfo: ArrayList<WeatherConditions>) : Re
     class HeaderViewHolder(itemView: View) :ViewHolder(itemView){
         val homeScreenFirstPart = itemView.findViewById<LinearLayout>(R.id.home_screen_first_part)
     }
-}
+}*/
