@@ -3,13 +3,14 @@ package co.develhope.meteoapp.network.data
 import com.google.gson.annotations.SerializedName
 import java.time.OffsetDateTime
 
+
 data class Hourly(
     val rain: List<Double>,
     val showers: List<Double>,
     val snowfall: List<Double>,
     @SerializedName("temperature_2m")
     val temperature2m: List<Double>,
-    val time: List<OffsetDateTime>,
+    val time: OffsetDateTime,
     val weathercode: List<Int>,
     @SerializedName("windspeed_10m")
     val windspeed10m: List<Double>,

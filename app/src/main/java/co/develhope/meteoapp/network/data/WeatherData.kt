@@ -16,5 +16,6 @@ data class WeatherData(
     @SerializedName("hourly_units")
     val hourlyHunits: HourlyUnits,
     val hourly: Hourly,
+    val daily : Daily,
     @SerializedName("current_weather") val currentWeather: CurrentWeather,
 )

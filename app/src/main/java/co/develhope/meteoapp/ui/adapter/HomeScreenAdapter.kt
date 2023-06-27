@@ -6,11 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.network.data.WeatherData
 import co.develhope.meteoapp.databinding.WeatherInfoHomeBinding
 
-class HomeScreenAdapter(private val list: MutableList<WeatherData> = mutableListOf()) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
+class HomeScreenAdapter(private val items : WeatherData) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: WeatherInfoHomeBinding) : RecyclerView.ViewHolder(binding.root){
-        fun onBind(item: WeatherData){
-
+        fun onBind(item: WeatherData, position: Int) {
+            val temperatureMax = item.daily.temperature2mMax[position]
+            val temperatureMin = item.daily.temperature2mMin[position]
 
         }
     }
@@ -19,11 +20,9 @@ class HomeScreenAdapter(private val list: MutableList<WeatherData> = mutableList
         return ViewHolder(WeatherInfoHomeBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
-    override fun getItemCount(): Int {
-        return list.size
-    }
+    override fun getItemCount(): Int = items.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.onBind(list[position])
+        holder.onBind(items[position])
     }
 }

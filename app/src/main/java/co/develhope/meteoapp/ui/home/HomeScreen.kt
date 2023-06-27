@@ -31,11 +31,6 @@ class HomeScreen : Fragment() {
     ): View? {
         binding = HomeScreenBinding.inflate(inflater, container, false)
 
-        lifecycleScope.launch {
-
-            val response = api.getWeatherInfo()
-            binding.temperatureMin.text = response.body()?.daily?.temperature_2m_min.toString()
-        }
 
 
         binding.recyclerHomeView.layoutManager = LinearLayoutManager(context)
