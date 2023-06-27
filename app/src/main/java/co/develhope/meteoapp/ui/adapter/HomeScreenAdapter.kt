@@ -39,7 +39,9 @@ class HomeScreenAdapter(private val dataset: List<HomeScreenItem>) : RecyclerVie
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(cardItem: HomeScreenItem.CardItem) {
-            binding. =
+            binding.day.text = itemView.context.getString(
+                R.string.oggi,
+                getLocalizedDay(cardItem.dailyForecast.date.dayOfWeek.name)
             )
 
 
