@@ -1,150 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/weather_info_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <GridLayout
-        android:id="@+id/frame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/frame_home">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_card"
+        android:layout_width="342dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/purple_200"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/home_today_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:paddingTop="18dp"
-                android:text="Oggi"
-                android:textColor="@color/white"
-                android:textSize="@dimen/weekday_home" />
-            <TextView
-                android:id="@+id/home_data"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:paddingStart="18dp"
-                android:paddingTop="3dp"
-                android:paddingEnd="18dp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/date_home" />
-        </LinearLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_18"
+            android:layout_marginTop="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/oggi"
+            android:textAppearance="@style/day"
+            tools:ignore="TextContrastCheck" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tempmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/temperature_min_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="18dp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:paddingTop="3dp"
-                android:text="min"
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
-        </LinearLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_153"
+            android:layout_marginTop="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/tempmin"
+            android:textAppearance="@style/tempminnum"
+            tools:ignore="TextContrastCheck" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tempmax"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/temperature_max_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
-                android:text="max"
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
-        </LinearLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_245"
+            android:layout_marginTop="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/tempmax"
+            android:textAppearance="@style/tempmaxnum"
+            tools:ignore="TextContrastCheck" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:orientation="vertical">
-            <TextView
-                android:id="@+id/windspeed_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
-                android:text="vento"
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
-        </LinearLayout>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_18"
+            android:layout_marginTop="@dimen/margin_43"
+            android:gravity="top"
+            android:text="@string/data"
+            android:textAppearance="@style/data"
+            tools:ignore="TextContrastCheck" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:orientation="vertical">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_153"
+            android:layout_marginTop="@dimen/margin_43"
+            android:gravity="top"
+            android:text="@string/min"
+            android:textAppearance="@style/min"
+            tools:ignore="TextContrastCheck" />
 
-            <TextView
-                android:id="@+id/precipitation_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:text="precip."
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
+        <TextView
+            android:id="@+id/max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_245"
+            android:layout_marginTop="@dimen/margin_43"
+            android:gravity="top"
+            android:text="@string/max"
+            android:textAppearance="@style/max"
+            tools:ignore="TextContrastCheck" />
 
-        </LinearLayout>
         <ImageView
-            android:id="@+id/weather_status_home"
-            android:src="@drawable/sun"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
-            />
-    </GridLayout>
+            android:id="@+id/imagetype"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/margin_18"
+            android:layout_marginTop="@dimen/margin_85"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:contentDescription="TODO"
+            tools:ignore="ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/umidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_153"
+            android:layout_marginTop="@dimen/margin_88"
+            android:gravity="top"
+            android:text="@string/rain"
+            android:textAppearance="@style/umidity"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+
+            android:id="@+id/precip_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_153"
+            android:layout_marginTop="@dimen/margin_115"
+            android:layout_marginEnd="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/precip_"
+            android:textAppearance="@style/precip_"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/kmh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_245"
+            android:layout_marginTop="@dimen/margin_88"
+            android:layout_marginEnd="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/kmh"
+            android:textAppearance="@style/kmh"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/vento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/margin_245"
+            android:layout_marginTop="@dimen/margin_115"
+            android:layout_marginEnd="@dimen/margin_18"
+            android:gravity="top"
+            android:text="@string/vento_home"
+            android:textAppearance="@style/vento"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

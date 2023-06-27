@@ -21,7 +21,14 @@
     <!-- CardViewItem.xml -->
     <dimen name="margin_start_frame">24dp</dimen>
     <dimen name="margin_top_frame">22dp</dimen>
-    <dimen name="padding_top_textview">18dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_115">115dp</dimen>
+    <dimen name="margin_245">245dp</dimen>
+    <dimen name="margin_153">153dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_85">85dp</dimen>
+    <dimen name="margin_43">43dp</dimen>
+
     <dimen name="margin_end_textview">72dp</dimen>
     <dimen name="padding_top_textview2">2dp</dimen>
 
