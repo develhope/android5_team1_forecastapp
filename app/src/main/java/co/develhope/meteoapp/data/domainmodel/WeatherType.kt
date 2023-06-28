@@ -16,16 +16,4 @@ enum class WeatherType {
             else -> R.drawable.moon
         }
     }
-    fun Int?.getWeatherType(): WeatherType {
-        return when (this) {
-            0  -> WeatherType.Sun
-            1, 2, 3 -> WeatherType.Cloud
-            in 45..48 -> WeatherType.Fog
-            in 51..77 -> WeatherType.Rain
-            80, 81, 82 -> WeatherType.HeavyRain
-            in 95..99 -> WeatherType.HeavyRain
-            else -> WeatherType.Cloud
-
-        }
-    }
 }

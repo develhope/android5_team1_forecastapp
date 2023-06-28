@@ -4,9 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import co.develhope.meteoapp.network.OffsetDateTimeTypeAdapter
 import co.develhope.meteoapp.network.WeatherAPI
-import co.develhope.meteoapp.network.WeatherForecast
 import co.develhope.meteoapp.network.data.WeatherData
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

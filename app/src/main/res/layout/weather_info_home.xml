@@ -31,10 +31,9 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="@dimen/margin_18"
             android:layout_marginTop="@dimen/margin_18"
+            android:textColor="@color/white"
             android:gravity="top"
-            android:text="@string/oggi"
-            android:textAppearance="@style/day"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/oggi" />
 
         <TextView
             android:id="@+id/tempmin"
@@ -45,9 +44,7 @@
             android:layout_marginStart="@dimen/margin_153"
             android:layout_marginTop="@dimen/margin_18"
             android:gravity="top"
-            android:text="@string/tempmin"
-            android:textAppearance="@style/tempminnum"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/tempmin"/>
 
         <TextView
             android:id="@+id/tempmax"
@@ -58,9 +55,7 @@
             android:layout_marginStart="@dimen/margin_245"
             android:layout_marginTop="@dimen/margin_18"
             android:gravity="top"
-            android:text="@string/tempmax"
-            android:textAppearance="@style/tempmaxnum"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/tempmax" />
 
         <TextView
             android:id="@+id/data"
@@ -71,9 +66,7 @@
             android:layout_marginStart="@dimen/margin_18"
             android:layout_marginTop="@dimen/margin_43"
             android:gravity="top"
-            android:text="@string/data"
-            android:textAppearance="@style/data"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/data" />
 
         <TextView
             android:id="@+id/min"
@@ -84,9 +77,7 @@
             android:layout_marginStart="@dimen/margin_153"
             android:layout_marginTop="@dimen/margin_43"
             android:gravity="top"
-            android:text="@string/min"
-            android:textAppearance="@style/min"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/min" />
 
         <TextView
             android:id="@+id/max"
@@ -97,8 +88,7 @@
             android:layout_marginStart="@dimen/margin_245"
             android:layout_marginTop="@dimen/margin_43"
             android:gravity="top"
-            android:text="@string/max"
-            android:textAppearance="@style/max" />
+            android:text="@string/max" />
 
         <ImageView
             android:id="@+id/imageHome"
@@ -106,8 +96,7 @@
             android:layout_height="45dp"
             android:layout_marginStart="@dimen/margin_18"
             android:layout_marginTop="@dimen/margin_85"
-            android:layout_marginBottom="@dimen/margin_18"
-            tools:ignore="ImageContrastCheck"/>
+            android:layout_marginBottom="@dimen/margin_18" />
 
         <TextView
             android:id="@+id/umidity"
@@ -118,8 +107,7 @@
             android:layout_marginStart="@dimen/margin_153"
             android:layout_marginTop="@dimen/margin_88"
             android:gravity="top"
-            android:text="@string/rain"
-            android:textAppearance="@style/umidity" />
+            android:text="@string/rain" />
 
         <TextView
 
@@ -132,9 +120,7 @@
             android:layout_marginTop="@dimen/margin_115"
             android:layout_marginEnd="@dimen/margin_18"
             android:gravity="top"
-            android:text="@string/precip_"
-            android:textAppearance="@style/precip_"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/precip_"/>
 
         <TextView
             android:id="@+id/kmh"
@@ -146,9 +132,7 @@
             android:layout_marginTop="@dimen/margin_88"
             android:layout_marginEnd="@dimen/margin_18"
             android:gravity="top"
-            android:text="@string/kmh"
-            android:textAppearance="@style/kmh"
-            tools:ignore="TextContrastCheck" />
+            android:text="@string/kmh" />
 
         <TextView
             android:id="@+id/vento"
@@ -160,8 +144,7 @@
             android:layout_marginTop="@dimen/margin_115"
             android:layout_marginEnd="@dimen/margin_18"
             android:gravity="top"
-            android:text="@string/vento_home"
-            android:textAppearance="@style/vento" />
+            android:text="@string/vento_home" />
 
     </androidx.cardview.widget.CardView>
 

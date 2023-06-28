@@ -13,9 +13,6 @@ class HomeScreenAdapter(private val dataset: List<HomeScreenItem>) : RecyclerVie
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
 
-                )
-            )
-
 
         }
     }
