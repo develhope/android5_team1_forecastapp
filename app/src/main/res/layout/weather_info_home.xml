@@ -98,19 +98,16 @@
             android:layout_marginTop="@dimen/margin_43"
             android:gravity="top"
             android:text="@string/max"
-            android:textAppearance="@style/max"
-            tools:ignore="TextContrastCheck" />
+            android:textAppearance="@style/max" />
 
         <ImageView
-            android:id="@+id/imagetype"
+            android:id="@+id/imageHome"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginStart="@dimen/margin_18"
             android:layout_marginTop="@dimen/margin_85"
             android:layout_marginBottom="@dimen/margin_18"
-            android:contentDescription="TODO"
-            tools:ignore="ImageContrastCheck"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:ignore="ImageContrastCheck"/>
 
         <TextView
             android:id="@+id/umidity"
@@ -122,8 +119,7 @@
             android:layout_marginTop="@dimen/margin_88"
             android:gravity="top"
             android:text="@string/rain"
-            android:textAppearance="@style/umidity"
-            tools:ignore="TextContrastCheck" />
+            android:textAppearance="@style/umidity" />
 
         <TextView
 
@@ -165,8 +161,7 @@
             android:layout_marginEnd="@dimen/margin_18"
             android:gravity="top"
             android:text="@string/vento_home"
-            android:textAppearance="@style/vento"
-            tools:ignore="TextContrastCheck" />
+            android:textAppearance="@style/vento" />
 
     </androidx.cardview.widget.CardView>
 

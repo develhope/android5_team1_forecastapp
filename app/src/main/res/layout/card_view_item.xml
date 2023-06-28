@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_top_textview"
+                android:paddingTop="18dp"
                 android:text="@string/umidit_"
                 android:textAppearance="@style/umidit_" />
 
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_top_textview"
+                android:paddingTop="18dp"
                 android:text="@string/vento"
                 android:textAppearance="@style/vento" />
 
@@ -112,7 +112,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_top_textview"
+                android:paddingTop="18dp"
                 android:text="0 mm"
                 android:textColor="@color/white" />
 
@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_top_textview"
+                android:paddingTop="18dp"
                 android:text="@string/copertura"
                 android:textAppearance="@style/copertura" />
 
@@ -157,7 +157,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/padding_top_textview"
+                android:paddingTop="18dp"
                 android:text="@string/pioggia"
                 android:textAppearance="@style/pioggia" />
 

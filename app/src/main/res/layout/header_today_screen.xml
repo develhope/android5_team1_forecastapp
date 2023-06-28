@@ -36,7 +36,7 @@
                 android:text="Oggi,"
                 android:textSize="@dimen/textviewSize"
                 android:textStyle="bold"
-                android:textAppearance="@style/oggi_domeni" />
+                android:textAppearance="@style/oggi_domani" />
             <TextView
                 android:id="@+id/oggi_domeni"
                 android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_marginStart="@dimen/margin_start"
                 android:textStyle="bold"
                 android:text="@string/oggi_domeni"
-                android:textAppearance="@style/oggi_domeni" />
+                android:textAppearance="@style/oggi_domani" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

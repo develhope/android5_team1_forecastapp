@@ -43,7 +43,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="2dp"
                     android:text="Oggi,"
-                    android:textAppearance="@style/oggi_domeni"
+                    android:textAppearance="@style/oggi_domani"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -53,7 +53,7 @@
                     android:layout_height="17dp"
                     android:layout_marginStart="24dp"
                     android:text="@string/oggi_domeni"
-                    android:textAppearance="@style/oggi_domeni"
+                    android:textAppearance="@style/oggi_domani"
                     android:textStyle="bold" />
             </LinearLayout>
 
