@@ -32,11 +32,11 @@ class HomeScreen : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val weatherInfoList = listOf(
-            WeatherInfoItem("Giorno 1" ),
-            WeatherInfoItem("Giorno 2" ),
-            WeatherInfoItem("Giorno 3" ),
-            WeatherInfoItem("Giorno 4" ),
-            WeatherInfoItem("Giorno 5" )
+            WeatherInfoItem("Domani", "29/06", "23°","32°", "11km", "0mm" ),
+            WeatherInfoItem("Venerdì", "30/06", "23°", "31°", "8km","0mm" ),
+            WeatherInfoItem("Sabato", "01/07","20°", "29°", "7km", "0mm" ),
+            WeatherInfoItem("Domenica", "02/07", "21°", "30°", "12km", "0mm"),
+            WeatherInfoItem("Lunedì", "03/07", "19°", "26°","14km", "0mm" )
         )
         binding.homeList.layoutManager = LinearLayoutManager(context)
         binding.homeList.adapter = HomeScreenAdapter(weatherInfoList)

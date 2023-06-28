@@ -9,7 +9,12 @@ class HomeScreenAdapter(val list: List<WeatherInfoItem>) : RecyclerView.Adapter<
 
     inner class ViewHolder(private val binding: WeatherInfoHomeBinding) : RecyclerView.ViewHolder(binding.root){
         fun onBind(item: WeatherInfoItem){
-            binding.weatherInfoText.text = item.text
+            binding.weatherInfoWeekday.text = item.weekday
+            binding.weatherInfoDate.text = item.date
+            binding.weatherInfoTempMin.text = item.min_temp
+            binding.weatherInfoTempMax.text = item.max_temp
+            binding.weatherInfoWindSpeed.text = item.wind_speed
+            binding.weatherInfoRain.text = item.rain
         }
     }
 
