@@ -24,7 +24,7 @@ interface WeatherAPI {
             "cloudcover"
         ),
         @Query("current_weather") current_weather: Boolean = true,
-        @Query("timezone") timezone: String = "Europe/Berlin",
+        @Query("timezone") timezone: String,
     ): Response<DailySummary>
 
     @GET("v1/forecast")
@@ -46,6 +46,6 @@ interface WeatherAPI {
             "weathercode"
         ),
         @Query("current_weather") current_weather: Boolean = true,
-        @Query("timezone") timezone: String = "Europe/Berlin",
+        @Query("timezone") timezone: String,
     ): Response<WeeklySummary>
 }

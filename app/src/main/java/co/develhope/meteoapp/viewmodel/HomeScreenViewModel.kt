@@ -10,6 +10,7 @@ import co.develhope.meteoapp.network.WeatherForecast
 import co.develhope.meteoapp.network.data.WeatherData
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.threeten.bp.OffsetDateTime
 import retrofit2.Retrofit
@@ -38,9 +39,13 @@ class HomeScreenViewModel : ViewModel() {
         weatherApi = retrofit.create(WeatherAPI::class.java)
     }
 
-    private fun weatherFetch() {
-        viewModelScope.launch {
+    private fun weatherProvider() {
+        viewModelScope.launch(Dispatchers.IO) {
             try {
+                val weatherInfo = weatherApi.getWeeklyWeather(
+
+
+                )
 
 
 
