@@ -16,16 +16,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 private const val BASE_URL = "https://api.open-meteo.com/"
 class HomeScreenViewModel : ViewModel() {
-
-    private var weatherApi : WeatherAPI
-        get() {
-            TODO()
-        }
-    private val _weatherLiveData = MutableLiveData<WeatherData>()
+    /*private val _weatherLiveData = MutableLiveData<WeatherData>()
     val weatherLiveData : LiveData<WeatherData> = _weatherLiveData
 
     private fun provideGson(): Gson = GsonBuilder()
-        .registerTypeAdapter(OffsetDateTime::class.java, OffsetDateTimeTypeAdapter())
+        .registerTypeAdapter(OffsetDateTime::class.java,
         .create()
 
     init {
@@ -53,4 +48,4 @@ class HomeScreenViewModel : ViewModel() {
             }
         }
     }
-}
+*/}

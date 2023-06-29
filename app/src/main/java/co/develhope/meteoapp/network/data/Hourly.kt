@@ -10,7 +10,7 @@ data class Hourly(
     val snowfall: List<Double>,
     @SerializedName("temperature_2m")
     val temperature2m: List<Double>,
-    val time: OffsetDateTime,
+    val time: List<String>,
     val weathercode: List<Int>,
     @SerializedName("windspeed_10m")
     val windspeed10m: List<Double>,

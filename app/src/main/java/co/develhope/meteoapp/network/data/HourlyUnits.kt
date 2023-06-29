@@ -8,7 +8,7 @@ data class HourlyUnits(
     val snowfall: String,
     @SerializedName("temperature_2m")
     val temperature2m: String,
-    val time: String,
+    val time: List<String>,
     val weathercode: String,
     @SerializedName("windspeed_10m")
     val windspeed10m: String

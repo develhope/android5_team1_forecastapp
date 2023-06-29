@@ -48,4 +48,9 @@ interface WeatherAPI {
         @Query("current_weather") current_weather: Boolean = true,
         @Query("timezone") timezone: String,
     ): Response<WeeklySummary>
+
+    @GET("v1/forecast")
+    suspend fun getSingleApi(@Query("daily") daily : List<String> = listOf(
+        "temperature_2m_min"
+    )) : Response<WeeklySummary>
 }

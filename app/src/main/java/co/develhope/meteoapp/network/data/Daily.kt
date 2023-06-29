@@ -14,7 +14,7 @@ data class Daily(
     val temperature2mMax: List<Double>,
     @SerializedName("temperature_2m_min")
     val temperature2mMin: List<Double>,
-    val time: OffsetDateTime,
+    var time: List<String>,
     @SerializedName("weathercode")
     val weathercode: List<Int>,
     @SerializedName("windspeed_10m_max")
