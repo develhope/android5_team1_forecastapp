@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeScreen"
-        android:name="co.develhope.meteoapp.HomeScreen"
+        android:name="co.develhope.meteoapp.ui.HomeScreen"
         android:label="Home Screen" >
         <action
             android:id="@+id/action_homeScreen_to_todayScreen"

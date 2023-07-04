@@ -7,6 +7,11 @@
     <string name="palermo_sic">Palermo, Sicilia</string>
     <string name="prossimi_5">PROSSIMI 5 GIORNI</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_temp_min">Err</string>
+    <string name="home_temp_max">Err</string>
+    <string name="home_rain_sum">Err</string>
+    <string name="home_wind_speed">Err</string>
+    <string name="tomorrow">Domani</string>
 
     <!--TodayScreen-->
     <string name="oggi_domeni">Domenica 10 settembre</string>

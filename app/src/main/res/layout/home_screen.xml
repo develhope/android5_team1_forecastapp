@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:overScrollMode="always"
-    tools:context=".HomeScreen"
+    tools:context=".ui.HomeScreen"
     android:background="@drawable/home_background">
 
     <TextView
@@ -38,6 +38,7 @@
             android:layout_column="0"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/home_screen_day_of_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
@@ -47,6 +48,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/weekday_home" />
         <TextView
+            android:id="@+id/home_screen_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
@@ -65,11 +67,12 @@
             android:layout_column="1"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/home_screen_temp_min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="72dp"
             android:paddingTop="18dp"
-            android:text="22°"
+            android:text="@string/home_temp_min"
             android:textColor="@color/white"
             android:textSize="@dimen/big_text_home" />
         <TextView
@@ -89,10 +92,11 @@
             android:layout_column="2"
             android:orientation="vertical">
         <TextView
+            android:id="@+id/home_screen_temp_max"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="18dp"
-            android:text="31°"
+            android:text="@string/home_temp_max"
             android:textColor="@color/white"
             android:textSize="@dimen/big_text_home" />
         <TextView
@@ -112,10 +116,11 @@
             android:layout_column="2"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/home_screen_wind_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="18dp"
-                android:text="12kmh"
+                android:text="@string/home_wind_speed"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
@@ -136,10 +141,11 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/home_screen_rain_sum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="18dp"
-                android:text="0 mm"
+                android:text="@string/home_rain_sum"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
@@ -152,6 +158,7 @@
 
         </LinearLayout>
         <ImageView
+            android:id="@+id/weathercode_icon"
             android:src="@drawable/sun"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

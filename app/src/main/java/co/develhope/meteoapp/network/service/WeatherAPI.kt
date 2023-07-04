@@ -32,5 +32,5 @@ interface WeatherAPI {
         @Query("daily") daily: String,
         @Query("current_weather") currentWeather: Boolean,
         @Query("timezone") timezone: String
-    ): Response<WeeklySummary>
+    ): WeeklySummary
 }
