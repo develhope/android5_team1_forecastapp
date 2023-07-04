@@ -5,13 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.lifecycle.lifecycleScope
 import co.develhope.meteoapp.databinding.HomeScreenBinding
-
+import co.develhope.meteoapp.network.NetworkProvider
+import kotlinx.coroutines.launch
 
 
 class HomeScreen : Fragment() {
     private lateinit var binding : HomeScreenBinding
+
+    private var weatherApi = NetworkProvider()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -31,14 +34,13 @@ class HomeScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val weatherInfoList = listOf(
-            WeatherInfoItem("Domani", "29/06", "23°","32°", "11km", "0mm" ),
-            WeatherInfoItem("Venerdì", "30/06", "23°", "31°", "8km","0mm" ),
-            WeatherInfoItem("Sabato", "01/07","20°", "29°", "7km", "0mm" ),
-            WeatherInfoItem("Domenica", "02/07", "21°", "30°", "12km", "0mm"),
-            WeatherInfoItem("Lunedì", "03/07", "19°", "26°","14km", "0mm" )
-        )
-        binding.homeList.layoutManager = LinearLayoutManager(context)
-        binding.homeList.adapter = HomeScreenAdapter(weatherInfoList)
+        lifecycleScope.launch {
+                val response = weatherApi.api
+                val temp = response.getWeeklyWeather(38.13, 13.34, "temperature_2m_min", false, "GMT")
+                binding.homeScreenTempMin.text = temp.daily.temperature2mMin[0].toString()
+        }
+
+//        binding.homeList.layoutManager = LinearLayoutManager(context)
+//        binding.homeList.adapter = HomeScreenAdapter(weatherInfoList)
     }
 }
