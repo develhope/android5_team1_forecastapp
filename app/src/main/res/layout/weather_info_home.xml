@@ -140,6 +140,7 @@
 
         </LinearLayout>
         <ImageView
+            android:id="@+id/weather_info_icon"
             android:src="@drawable/sun"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
