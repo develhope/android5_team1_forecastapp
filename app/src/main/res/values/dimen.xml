@@ -17,4 +17,12 @@
     <!-- Button dimen -->
     <dimen name="padding">80dp</dimen>
 
+
+    <!-- CardViewItem.xml -->
+    <dimen name="margin_start_frame">24dp</dimen>
+    <dimen name="margin_top_frame">22dp</dimen>
+    <dimen name="padding_top_textview">18dp</dimen>
+    <dimen name="margin_end_texview">72dp</dimen>
+    <dimen name="padding_top_textview2">2dp</dimen>
+
 </resources>

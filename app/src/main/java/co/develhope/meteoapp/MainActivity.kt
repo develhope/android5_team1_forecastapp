@@ -33,6 +33,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.tomorrowScreenNavigation -> {
                     navController.navigate(R.id.tomorrowScreen)
                 }
+                R.id.searchScreenNavigation -> {
+                    navController.navigate(R.id.searchScreen)
+                }
             }
             return@setOnItemSelectedListener true
         }

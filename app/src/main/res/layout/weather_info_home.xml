@@ -7,7 +7,7 @@
 
     <GridLayout
         android:id="@+id/frame"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="10dp"
@@ -20,17 +20,17 @@
             android:layout_column="0"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/weather_info_text"
+                android:id="@+id/weather_info_weekday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
+                android:layout_marginStart="18dp"
                 android:paddingTop="18dp"
                 android:text="Oggi"
                 android:textColor="@color/white"
                 android:textSize="@dimen/weekday_home" />
             <TextView
+                android:id="@+id/weather_info_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="40dp"
@@ -49,6 +49,7 @@
             android:layout_column="1"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/weather_info_temp_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="72dp"
@@ -73,6 +74,7 @@
             android:layout_column="2"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/weather_info_temp_max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="18dp"
@@ -96,6 +98,7 @@
             android:layout_column="2"
             android:orientation="vertical">
             <TextView
+                android:id="@+id/weather_info_wind_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="18dp"
@@ -120,6 +123,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/weather_info_rain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="18dp"
@@ -136,6 +140,7 @@
 
         </LinearLayout>
         <ImageView
+            android:id="@+id/weather_info_icon"
             android:src="@drawable/sun"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

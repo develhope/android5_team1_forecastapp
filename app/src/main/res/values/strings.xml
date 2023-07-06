@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--Home Screen-->
     <string name="app_name">METEO</string>
     <string name="error_message">C’è stato un problema con\nil caricamento dei tuoi dati.\nVerifica la tua rete e riprova.</string>
     <string name="palermo_sic">Palermo, Sicilia</string>
     <string name="prossimi_5">PROSSIMI 5 GIORNI</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_temp_min">Err</string>
+    <string name="home_temp_max">Err</string>
+    <string name="home_rain_sum">Err</string>
+    <string name="home_wind_speed">Err</string>
+    <string name="tomorrow">Domani</string>
 
+    <!--TodayScreen-->
+    <string name="oggi_domeni">Domenica 10 settembre</string>
+    <string name="some_id">11:00</string>
+    <string name="some_id2">31°</string>
+    <string name="some_id3">0%</string>
+    <string name="percepita">Percepita</string>
+    <string name="some_id4">45°</string>
+    <string name="indice_uv">Indice UV</string>
+    <string name="some_id5">5/10</string>
+    <string name="umidit_">Umidità</string>
+    <string name="some_id6">60%</string>
+    <string name="vento">Vento</string>
+    <string name="sse_7km_h">SSE 7km/h</string>
+    <string name="copertura">Copertura</string>
+    <string name="some_id7">24%</string>
+    <string name="pioggia">Pioggia</string>
+    <string name="cm">0cm</string>
 
+    <!--Bottom Nav-->
     <string name="Home">Home</string>
     <string name="Oggi">Oggi</string>
     <string name="Domani">Domani</string>
     <string name="Cerca">Cerca</string>
     <string name="Riprova">Riprova</string>
-
 
     <!-- ENG VERSION -->
     <string name="app_name_english">METEO</string>
@@ -20,7 +44,6 @@
     <string name="palermo_sic_english">Palermo, Sicily</string>
     <string name="prossimi_5_english">NEXT 5 DAYS</string>
     <string name="hello_blank_fragment_english">Hello blank fragment</string>
-
     <string name="Home_english">Home</string>
     <string name="Oggi_english">Today</string>
     <string name="Domani_english">Tomorrow</string>
