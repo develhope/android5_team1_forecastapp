@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
             app:startDestination="@id/homeScreen">
 
     <fragment
@@ -11,6 +12,9 @@
         <action
             android:id="@+id/action_homeScreen_to_todayScreen"
             app:destination="@id/todayScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_errorScreen"
+            app:destination="@id/errorScreen" />
     </fragment>
 
     <fragment
@@ -39,5 +43,9 @@
             android:id="@+id/action_searchScreen_to_homeScreen"
             app:destination="@id/homeScreen" />
     </fragment>
-
+    <fragment
+        android:id="@+id/errorScreen"
+        android:name="co.develhope.meteoapp.ErrorScreen"
+        android:label="error_screen"
+        tools:layout="@layout/error_screen" />
 </navigation>
