@@ -1,14 +1,14 @@
 package co.develhope.meteoapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import co.develhope.meteoapp.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
-    private lateinit  var binding : ActivityMainBinding
-    private lateinit var bottomNavView : BottomNavigationView
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var bottomNavView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,13 +17,12 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavView = binding.bottomNavigationMenu
 
-
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        bottomNavView.setOnItemSelectedListener {
-            when(it.itemId) {
+        bottomNavView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
                 R.id.homeScreenNavigation -> {
                     navController.navigate(R.id.homeScreen)
                 }
