@@ -13,4 +13,5 @@ data class ForecastData(
     @SerializedName("hourly_units") val hourlyUnits: HourlyUnits,
     val hourly: Hourly,
     @SerializedName("current_weather") val currentWeather: CurrentWeather,
+    var isExpanded: Boolean = false
 )

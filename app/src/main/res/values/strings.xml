@@ -31,6 +31,11 @@
     <string name="pioggia">Pioggia</string>
     <string name="cm">0cm</string>
 
+    <!--TodayScreenAdapterTitle-->
+    <string name="city_region" translatable="false">%s , %s</string>
+    <string name="today">%s,</string>
+    <string name="today_details" translatable="false">%s %s %s</string>
+
     <!--Bottom Nav-->
     <string name="Home">Home</string>
     <string name="Oggi">Oggi</string>

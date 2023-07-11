@@ -1,29 +1,13 @@
 package co.develhope.meteoapp.network.service
 
-import co.develhope.meteoapp.network.dto.DailySummary
+import co.develhope.meteoapp.network.dto.ForecastData
 import co.develhope.meteoapp.network.dto.WeeklySummary
-import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WeatherAPI {
-    @GET("v1/forecast")
-    suspend fun getDailyWeather(
-        @Query("latitude") latitude: Double,
-        @Query("longitude") longitude: Double,
-        @Query("hourly") hourly: List<String> = listOf(
-            "temperature_2m",
-            "rain",
-            "showers",
-            "snowfall",
-            "weathercode",
-            "windspeed_10m",
-            "relativehumidity_2m",
-            "cloudcover"
-        ),
-        @Query("current_weather") current_weather: Boolean = true,
-        @Query("timezone") timezone: String,
-    ): Response<DailySummary>
+    @GET("v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m,relativehumidity_2m,dewpoint_2m,apparent_temperature,rain,weathercode,cloudcover,windspeed_10m,uv_index,is_day&timezone=auto&start_date=2023-07-10&end_date=2023-07-10")
+    suspend fun getDailyWeather(): ForecastData
 
     @GET("v1/forecast")
     suspend fun getWeeklyWeather(
