@@ -6,8 +6,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+private const val BASE_URL = "https://api.open-meteo.com/"
 class NetworkProvider {
-    private val BASE_URL = "https://api.open-meteo.com/"
     private val interceptor = HttpLoggingInterceptor()
 
     init {
@@ -17,12 +17,13 @@ class NetworkProvider {
         .addInterceptor(interceptor)
         .build()
 
-    val retrofit = Retrofit.Builder()
+
+    private val retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okhttpClient)
         .build()
 
-    val api = retrofit.create(WeatherAPI::class.java)
+    val api: WeatherAPI = retrofit.create(WeatherAPI::class.java)
 
 }

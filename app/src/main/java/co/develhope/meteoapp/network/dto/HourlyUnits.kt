@@ -1,6 +1,8 @@
 package co.develhope.meteoapp.network.dto
 
+
 import com.google.gson.annotations.SerializedName
+import org.threeten.bp.OffsetDateTime
 
 data class HourlyUnits(
     val time: String,

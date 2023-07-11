@@ -6,7 +6,7 @@
     android:background="#F0EFFF"
     android:focusable="true">
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/hourly_info_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -35,9 +35,7 @@
                     android:layout_marginTop="7dp"
                     android:layout_marginBottom="7dp"
                     android:text="@string/some_id"
-                    android:textAppearance="@style/some_id"
-
-                    />
+                    android:textAppearance="@style/some_id" />
 
                 <ImageView
                     android:id="@+id/weatherImageView"
@@ -49,7 +47,7 @@
                     android:background="@drawable/sun_image" />
 
                 <TextView
-                    android:id="@+id/temperatureTextView"
+                    android:id="@+id/temperatureToday"
                     android:layout_width="35dp"
                     android:layout_height="24dp"
                     android:layout_marginTop="4dp"
@@ -57,9 +55,7 @@
                     android:layout_marginStart="41.2dp"
                     android:text="@string/some_id2"
                     android:textStyle="bold"
-                    android:textAppearance="@style/some_id2"
-
-                    />
+                    android:textAppearance="@style/some_id2" />
 
                 <ImageView
                     android:id="@+id/humidityImageView"
@@ -79,6 +75,16 @@
                     android:layout_marginStart="9.75dp"
                     android:text="@string/some_id3"
                     android:textAppearance="@style/some_id2" />
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/arrow_today_tomorrow_screen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
             </LinearLayout>
 
@@ -106,7 +112,7 @@
                 android:layout_marginTop="19dp"
                 android:layout_marginBottom="41dp"
                 app:cardCornerRadius="8dp"
-                >
+                android:visibility="gone">
                 <GridLayout
                     android:id="@+id/frame"
                     android:layout_width="match_parent"
@@ -126,7 +132,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/percepita"
+                                android:id="@+id/temp_percepita"
                                 android:layout_width="68dp"
                                 android:layout_height="18dp"
                                 android:layout_marginStart="18dp"
@@ -143,17 +149,16 @@
                                 android:layout_marginBottom="14dp"
                                 android:layout_marginStart="18dp"
                                 android:layout_marginEnd="151dp"
-                                android:text="@string/some_id4"
                                 android:textAppearance="@style/some_id4" />
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/indice"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/indice"
                                 android:layout_width="69dp"
                                 android:layout_height="18dp"
                                 android:layout_marginTop="18dp"
@@ -168,7 +173,6 @@
                                 android:layout_height="19dp"
                                 android:layout_marginEnd="109dp"
                                 android:layout_marginBottom="14dp"
-                                android:text="@string/some_id5"
                                 android:textAppearance="@style/some_id5" />
                         </LinearLayout>
 
@@ -207,13 +211,12 @@
                                 android:textAppearance="@style/umidit_" />
 
                             <TextView
-                                android:id="@+id/percentualeUmiTextView"
+                                android:id="@+id/humidityPercentage"
                                 android:layout_marginStart="18dp"
                                 android:layout_width="35dp"
                                 android:layout_height="19dp"
                                 android:layout_marginEnd="72.5dp"
                                 android:layout_marginBottom="19dp"
-                                android:text="@string/some_id6"
                                 android:textAppearance="@style/some_id6" />
                         </LinearLayout>
 
@@ -238,7 +241,6 @@
                                 android:layout_height="19dp"
                                 android:layout_marginBottom="14dp"
                                 android:layout_marginEnd="60dp"
-                                android:text="@string/sse_7km_h"
                                 android:textAppearance="@style/sse_7km_h" />
                         </LinearLayout>
 
@@ -282,7 +284,6 @@
                                 android:layout_marginStart="20dp"
                                 android:layout_marginEnd="146dp"
                                 android:layout_marginBottom="19dp"
-                                android:text="@string/some_id7"
                                 android:textAppearance="@style/some_id7" />
                         </LinearLayout>
 
@@ -307,18 +308,12 @@
                                 android:layout_marginBottom="19dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/cm"
                                 android:textAppearance="@style/cm" />
 
                         </LinearLayout>
 
 
                     </LinearLayout>
-
-
-
-
-
 
                 </GridLayout>
 
