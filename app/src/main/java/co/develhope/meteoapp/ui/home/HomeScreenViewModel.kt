@@ -1,12 +1,10 @@
-package co.develhope.meteoapp.ui.viewmodels
+package co.develhope.meteoapp.ui.home
 
-import android.annotation.SuppressLint
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.network.NetworkProvider
-import co.develhope.meteoapp.network.dto.WeeklySummary
+import co.develhope.meteoapp.remote.WeeklySummary
 import kotlinx.coroutines.launch
 
 class HomeScreenViewModel : ViewModel() {

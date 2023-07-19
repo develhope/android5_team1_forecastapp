@@ -1,6 +1,10 @@
-package co.develhope.meteoapp.network.dto
+package co.develhope.meteoapp.remote
 
+import co.develhope.meteoapp.network.local.WeatherSummary
+import co.develhope.meteoapp.network.local.getWeatherType
 import com.google.gson.annotations.SerializedName
+import org.threeten.bp.OffsetDateTime
+
 
 data class Daily(
     @SerializedName("precipitation_sum")

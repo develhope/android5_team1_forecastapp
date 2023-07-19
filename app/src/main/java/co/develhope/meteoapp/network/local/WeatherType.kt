@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.today.domain
+package co.develhope.meteoapp.network.local
 
 import co.develhope.meteoapp.R
 
@@ -14,7 +14,6 @@ enum class WeatherType {
         }
     }
 }
-
 fun Int?.getWeatherType(): WeatherType {
     return when(this) {
         0 -> WeatherType.SUNNY

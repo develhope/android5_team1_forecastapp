@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.ui
+package co.develhope.meteoapp.ui.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,14 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.HomeScreenBinding
-import co.develhope.meteoapp.network.dto.WeeklySummary
-import co.develhope.meteoapp.ui.adapter.HomeScreenAdapter
-import co.develhope.meteoapp.ui.viewmodels.HomeScreenViewModel
-import org.threeten.bp.DayOfWeek
-import org.threeten.bp.LocalDate
-import org.threeten.bp.format.DateTimeFormatter
-import org.threeten.bp.format.TextStyle
-import java.util.Locale
+import co.develhope.meteoapp.remote.WeeklySummary
 
 
 class HomeScreen : Fragment() {

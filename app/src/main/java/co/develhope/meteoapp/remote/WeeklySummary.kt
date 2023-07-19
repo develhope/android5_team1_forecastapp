@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.network.dto
+package co.develhope.meteoapp.remote
 
 import com.google.gson.annotations.SerializedName
 

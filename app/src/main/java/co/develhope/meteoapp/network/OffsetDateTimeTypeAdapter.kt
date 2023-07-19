@@ -1,5 +1,6 @@
 package co.develhope.meteoapp.network
 
+import android.util.Log
 import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement

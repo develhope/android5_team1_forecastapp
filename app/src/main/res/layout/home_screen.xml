@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:overScrollMode="always"
-    tools:context=".ui.HomeScreen"
+    tools:context=".ui.home.HomeScreen"
     android:background="@drawable/home_background">
 
     <TextView

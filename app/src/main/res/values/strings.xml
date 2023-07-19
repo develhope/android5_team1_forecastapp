@@ -35,6 +35,26 @@
     <string name="city_region" translatable="false">%s , %s</string>
     <string name="today">%s,</string>
     <string name="today_details" translatable="false">%s %s %s</string>
+    <!---string hourly-->
+    <string name="time" translatable="false">%s:00</string>
+    <string name="type" translatable="false">type</string>
+    <string name="temp" translatable="false">%s °</string>
+    <string name="umidity" translatable="false">%s %%</string>
+    <!---string card titles-->
+    <string name="sp_percepita">Percepita</string>
+    <string name="sp_UV">Indice UV</string>
+    <string name="sp_umidita">Umidità</string>
+    <string name="sp_vento">Vento</string>
+    <string name="copertura2">Copertura</string>
+    <string name="pioggia2">Pioggia</string>
+    <!--- string card data-->
+    <string name="percepitaCard"> %s °</string>
+    <string name="uvCard">%s</string>
+    <string name="umiditaCard">%s %%</string>
+    <string name="ventoCard">SSE %s Km/h</string>
+    <string name="coperturaCard">%s %%</string>
+    <string name="pioggiaCard">%s cm</string>
+
 
     <!--Bottom Nav-->
     <string name="Home">Home</string>
@@ -42,6 +62,14 @@
     <string name="Domani">Domani</string>
     <string name="Cerca">Cerca</string>
     <string name="Riprova">Riprova</string>
+
+
+    <!--Search Screen-->
+    <string name="city_search_item">Città</string>
+    <string name="temp_search_item">Err°</string>
+    <string name="weather_search_item">unknown</string>
+    <string name="recent_search">Ricerche recenti</string>
+
 
     <!-- ENG VERSION -->
     <string name="app_name_english">METEO</string>
