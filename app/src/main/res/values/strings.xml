@@ -64,6 +64,13 @@
     <string name="Riprova">Riprova</string>
 
 
+    <!--Search Screen-->
+    <string name="city_search_item">Città</string>
+    <string name="temp_search_item">Err°</string>
+    <string name="weather_search_item">unknown</string>
+    <string name="recent_search">Ricerche recenti</string>
+
+
     <!-- ENG VERSION -->
     <string name="app_name_english">METEO</string>
     <string name="error_message_english">There was a problem with\nloading your data.\nPlease check your network and try again.</string>
