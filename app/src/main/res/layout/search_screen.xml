@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchScreen">
+    tools:context=".SearchScreen"
+    android:background="@color/app_background">
 
-    <!--Search view for filtering list view-->
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
+        android:background="@drawable/search_bar_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
         android:iconifiedByDefault="false"
         android:padding="4dp"
-        android:queryHint="Search City" />
+        android:queryHint="Search City"
+        />
 
-    <!--List View from which data is to be searched
-         for different programming languages-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idLVProgrammingLanguages"
+    <TextView
+        android:id="@+id/recent_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/searchView" />
+        android:text="@string/recent_search"
+        android:layout_margin="18dp"
+        android:layout_below="@+id/searchView"
+        android:textAppearance="@style/search_color_text"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/city_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recent_search"
+        tools:listitem="@layout/search_screen_item" />
 
 </RelativeLayout>
