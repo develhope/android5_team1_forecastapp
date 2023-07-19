@@ -6,57 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#F0EFFF">
-        <LinearLayout
-            android:id="@+id/home_screen_first_part"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_today_screen" />
 
-            <TextView
-                android:id="@+id/place"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="42dp"
-                android:layout_marginEnd="24dp"
-                android:text="@string/palermo_sic"
-                android:textAppearance="@style/oggi_domeni" />
+</LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="54dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/todayText"
-                    android:layout_width="184dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="2dp"
-                    android:text="Oggi,"
-                    android:textAppearance="@style/oggi_domeni"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/oggi_domeni"
-                    android:layout_width="184dp"
-                    android:layout_height="17dp"
-                    android:layout_marginStart="24dp"
-                    android:text="@string/oggi_domeni"
-                    android:textAppearance="@style/oggi_domeni"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:overScrollMode="never"
-                tools:itemCount="5"
-                tools:listitem="@layout/item_today_screen" />
-
-        </LinearLayout>
-    </LinearLayout>
