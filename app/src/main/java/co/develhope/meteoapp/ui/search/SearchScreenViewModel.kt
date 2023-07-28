@@ -26,12 +26,4 @@ class SearchScreenViewModel : ViewModel() {
             }
         }
     }
-
-    fun saveRecentSearches(list: MutableList<Place>) {
-//        recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
-        recentSearches = list
-        MyApplicationMeteo.preferences?.saveRecentSearch(recentSearches)
-    }
-
-
 }

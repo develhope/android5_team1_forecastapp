@@ -17,7 +17,7 @@ class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding
     private lateinit var viewModel : SearchScreenViewModel
     private lateinit var adapter: SearchScreenAdapter
-
+    var recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -38,7 +38,7 @@ class SearchScreen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
+        val recentSearches = recentSearches
 
         viewModel = ViewModelProvider(this)[SearchScreenViewModel::class.java]
 
@@ -60,10 +60,8 @@ class SearchScreen : Fragment() {
                 Log.d("Change","$newText")
                 if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
                 } else {Log.d("rec-searchers","Testing else")
-                adapter.updateList(MyApplicationMeteo.recentSearchesList)
+                adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
                 MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
-
-
                 return true
             }
         })
