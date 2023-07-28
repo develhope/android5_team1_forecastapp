@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.databinding.SearchScreenBinding
 
 
@@ -21,6 +22,7 @@ class SearchScreen : Fragment() {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+
     }
 
     override fun onCreateView(
@@ -29,15 +31,18 @@ class SearchScreen : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = SearchScreenBinding.inflate(inflater,container,false)
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
+
         viewModel = ViewModelProvider(this)[SearchScreenViewModel::class.java]
 
-        adapter = SearchScreenAdapter(emptyList())
+        adapter = SearchScreenAdapter(recentSearches)
         binding.cityList.layoutManager = LinearLayoutManager(context)
         binding.cityList.adapter = adapter
 
@@ -53,7 +58,12 @@ class SearchScreen : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 Log.d("Change","$newText")
-                if(newText != null && newText.length >= 2 ) viewModel.searchCity(newText)
+                if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
+                } else {Log.d("rec-searchers","Testing else")
+                adapter.updateList(MyApplicationMeteo.recentSearchesList)
+                MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
+
+
                 return true
             }
         })

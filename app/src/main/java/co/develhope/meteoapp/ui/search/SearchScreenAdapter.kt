@@ -1,9 +1,11 @@
 package co.develhope.meteoapp.ui.search
 
 import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.databinding.SearchScreenItemBinding
 import co.develhope.meteoapp.network.local.Place
 
@@ -17,7 +19,12 @@ class SearchScreenAdapter(private var list: List<Place>) : RecyclerView.Adapter<
         }
 
         fun saveCity(item: Place){
+            binding.searchItem.setOnClickListener{
+                MyApplicationMeteo.preferences?.savePrefPlace(item)
+                Log.d("pref-place","${MyApplicationMeteo.preferences?.getPrefPlace()}")
 
+                MyApplicationMeteo.recentSearchesList.add(item)
+            }
         }
     }
 
@@ -31,6 +38,7 @@ class SearchScreenAdapter(private var list: List<Place>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(list[position])
+        holder.saveCity(list[position])
     }
 
     @SuppressLint("NotifyDataSetChanged")

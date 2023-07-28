@@ -27,8 +27,7 @@ class HomeScreenAdapter(val list: WeeklySummary) : RecyclerView.Adapter<HomeScre
             binding.weatherInfoDate.text = item.daily.time[position + 1].drop(8).plus("/").plus(item.daily.time[position + 1].drop(5).dropLast(3))
             if(position + 1 == 1){
                 binding.weatherInfoWeekday.setText(R.string.tomorrow)
-            } else
-            binding.weatherInfoWeekday.text = DayOfWeek.from(LocalDate.parse(item.daily.time[position + 1])).getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
+            } else binding.weatherInfoWeekday.text = DayOfWeek.from(LocalDate.parse(item.daily.time[position + 1])).getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
         }
     }
 
