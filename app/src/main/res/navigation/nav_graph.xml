@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/searchScreen"
-        android:name="co.develhope.meteoapp.SearchScreen"
+        android:name="co.develhope.meteoapp.ui.search.SearchScreen"
         android:label="Search Screen" >
         <action
             android:id="@+id/action_searchScreen_to_homeScreen"

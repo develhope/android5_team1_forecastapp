@@ -17,7 +17,7 @@ sealed class TodayResult() {
         TodayResult()
 }
 class TodayScreenViewModel : ViewModel() {
-    private val api = NetworkProvider().api
+    private val api = NetworkProvider().weatherAPI
     private val _todayResult = MutableLiveData<TodayResult>()
     val todayResult: LiveData<TodayResult> = _todayResult
 
