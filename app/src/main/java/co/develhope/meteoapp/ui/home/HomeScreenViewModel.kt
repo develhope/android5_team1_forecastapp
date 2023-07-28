@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 class HomeScreenViewModel : ViewModel() {
 
     private val networkProvider = NetworkProvider()
-    private val weatherAPI = networkProvider.api
+    private val weatherAPI = networkProvider.weatherAPI
 
     private val _weeklyWeatherData = MutableLiveData<WeeklySummary>()
     val weeklyWeatherData : MutableLiveData<WeeklySummary> = _weeklyWeatherData

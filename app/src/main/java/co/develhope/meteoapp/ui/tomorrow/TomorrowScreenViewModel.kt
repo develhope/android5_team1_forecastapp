@@ -21,7 +21,7 @@ sealed class TomorrowResult() {
 
 class TomorrowScreenViewModel : ViewModel() {
 
-    private val api = NetworkProvider().api
+    private val api = NetworkProvider().weatherAPI
     private val _tomorrowWeatherLiveData = MutableLiveData<TomorrowResult>()
     val tomorrowWeatherLiveData : LiveData<TomorrowResult> = _tomorrowWeatherLiveData
 

@@ -5,10 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchScreen"
+    tools:context=".ui.search.SearchScreen"
     android:background="@color/app_background">
 
-    <androidx.appcompat.widget.SearchView
+    <SearchView
         android:id="@+id/searchView"
         android:background="@drawable/search_bar_background"
         android:layout_width="match_parent"
