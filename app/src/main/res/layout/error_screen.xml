@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0EFFF"
+    android:background="@color/app_background"
     android:orientation="vertical"
     tools:context=".ErrorScreen"
     android:gravity="center">
@@ -34,8 +34,8 @@
         android:layout_marginTop="@dimen/margin_20"
         android:backgroundTint="@color/night_blue"
         android:background="@drawable/error_button"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
         android:text="@string/Riprova"
         android:paddingStart="@dimen/padding"
         android:paddingEnd="@dimen/padding"/>
