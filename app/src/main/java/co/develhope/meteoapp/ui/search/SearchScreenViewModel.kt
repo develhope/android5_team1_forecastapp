@@ -12,9 +12,8 @@ import kotlinx.coroutines.launch
 
 class SearchScreenViewModel : ViewModel() {
 
-    val cityListLiveData = MutableLiveData<List<Place>>()
+    private val cityListLiveData = MutableLiveData<List<Place>>()
     val _cityListLiveData : LiveData<List<Place>> = cityListLiveData
-    var recentSearches = MyApplicationMeteo.recentSearchesList
 
     fun searchCity (city: String) {
         viewModelScope.launch {

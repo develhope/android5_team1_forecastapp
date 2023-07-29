@@ -17,12 +17,12 @@ class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding
     private lateinit var viewModel : SearchScreenViewModel
     private lateinit var adapter: SearchScreenAdapter
-    var recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
+    private var recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
-
     }
 
     override fun onCreateView(
