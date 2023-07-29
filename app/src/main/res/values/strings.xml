@@ -38,7 +38,7 @@
     <!---string hourly-->
     <string name="time" translatable="false">%s:00</string>
     <string name="type" translatable="false">type</string>
-    <string name="temp" translatable="false">%s °</string>
+    <string name="temp" translatable="false">%s C°</string>
     <string name="umidity" translatable="false">%s %%</string>
     <!---string card titles-->
     <string name="sp_percepita">Percepita</string>
@@ -54,6 +54,7 @@
     <string name="ventoCard">SSE %s Km/h</string>
     <string name="coperturaCard">%s %%</string>
     <string name="pioggiaCard">%s cm</string>
+    <string name="tv_temperature">%d C°</string>
 
 
     <!--Bottom Nav-->
