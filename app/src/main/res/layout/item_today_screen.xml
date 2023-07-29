@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutAnimation="@anim/reciclerview_animation"
     android:background="#F0EFFF"
     android:focusable="true">
+
     <LinearLayout
         android:id="@+id/hourly_info_bar"
         android:layout_width="match_parent"
@@ -102,13 +104,14 @@
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="342dp"
-                android:layout_height="213dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:elevation="4dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginBottom="41dp"
+                android:paddingBottom="30dp"
+                android:elevation="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="45dp"
                 app:cardCornerRadius="8dp"
                 android:visibility="gone">
                 <GridLayout

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="_24dp">24dp</dimen>
     <dimen name="_60dp">60dp</dimen>
+    <dimen name="_70dp">70dp</dimen>
 </resources>
