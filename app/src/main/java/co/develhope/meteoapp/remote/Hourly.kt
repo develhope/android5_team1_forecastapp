@@ -4,6 +4,7 @@ import co.develhope.meteoapp.network.local.CardSpecificDay
 import co.develhope.meteoapp.network.local.HourlySpecificDay
 import co.develhope.meteoapp.network.local.getWeatherType
 import co.develhope.meteoapp.network.local.HourlyForecast
+import co.develhope.meteoapp.network.local.WeatherType
 import com.google.gson.annotations.SerializedName
 import org.threeten.bp.OffsetDateTime
 
@@ -46,7 +47,11 @@ data class Hourly(
                 ),
                 hourlySpecificDay = HourlySpecificDay(
                     time = time,
-                    weatherType = this.weathercode.getOrNull(index).getWeatherType(),
+                    weatherType = if(time.hour in 19..23 || time.hour in 0..5) {
+                        WeatherType.NIGHT
+                    } else {
+                        this.weathercode.getOrNull(index).getWeatherType()
+                    },
                     temp = this.apparent_temperature.getOrNull(index)?.toInt() ?: 0,
                     humidity = this.relativehumidity_2m.getOrNull(index)?.toInt() ?: 0
                 )

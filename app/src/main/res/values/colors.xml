@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="night_blue">#5347DC</color>
     <color name="app_background">#F0EFFF</color>
+    <color name="blue_today">#230EA5</color>
 </resources>

@@ -16,7 +16,6 @@ import org.threeten.bp.format.DateTimeFormatter
 import java.lang.reflect.Type
 
 class OffsetDateTimeTypeAdapter : JsonSerializer<OffsetDateTime>, JsonDeserializer<OffsetDateTime> {
-
     override fun serialize(
         src: OffsetDateTime,
         typeOfSrc: Type,
@@ -41,7 +40,6 @@ class OffsetDateTimeTypeAdapter : JsonSerializer<OffsetDateTime>, JsonDeserializ
             date.toOffsetDateTime()
         }
     }
-
     companion object {
         private val formatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME
     }

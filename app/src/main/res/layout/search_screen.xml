@@ -17,8 +17,7 @@
         android:layout_marginTop="18dp"
         android:iconifiedByDefault="false"
         android:padding="4dp"
-        android:queryHint="Search City"
-        />
+        android:queryHint="Search City" />
 
     <TextView
         android:id="@+id/recent_search"

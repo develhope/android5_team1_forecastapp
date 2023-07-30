@@ -16,8 +16,6 @@ class HomeScreen : Fragment() {
     private lateinit var binding : HomeScreenBinding
     private lateinit var viewModel : HomeScreenViewModel
     private lateinit var adapter : HomeScreenAdapter
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {

@@ -1,99 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#F0EFFF"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:id="@+id/hourly_info_bar"
+    android:layoutAnimation="@anim/reciclerview_animation"
+    android:background="@color/app_background"
     android:focusable="true">
+
     <LinearLayout
-        android:id="@+id/hourly_info_bar"
+        android:id="@+id/home_screen_second_part"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="5dp">
 
-        <LinearLayout
-            android:layout_width="342dp"
-            android:layout_height="42dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/home_screen_second_part"
-                android:layout_width="326dp"
-                android:layout_height="32dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/hourTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7dp"
+            android:layout_marginBottom="@dimen/_7dp"
+            android:textAppearance="@style/some_id" />
 
-                <TextView
-                    android:id="@+id/hourTextView"
-                    android:layout_width="39dp"
-                    android:layout_height="18dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="7dp"
-                    android:textAppearance="@style/some_id" />
+        <ImageView
+            android:id="@+id/weatherImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="45dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sun" />
 
-                <ImageView
-                    android:id="@+id/weatherImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="3.76dp"
-                    android:layout_marginBottom="3.82dp"
-                    android:layout_marginStart="41.2dp"
-                    android:src="@drawable/sun"/>
+        <TextView
+            android:id="@+id/temperatureToday"
+            android:layout_width="wrap_content"
+            android:text="@string/temp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textAppearance="@style/some_id2"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/temperatureToday"
-                    android:layout_width="35dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="41.2dp"
-                    android:textStyle="bold"
-                    android:textAppearance="@style/some_id2" />
+        <ImageView
+            android:id="@+id/humidityImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="7dp"
+            android:src="@drawable/fluent_drop_16_filled" />
 
-                <ImageView
-                    android:id="@+id/humidityImageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7.25dp"
-                    android:layout_marginBottom="7.25dp"
-                    android:layout_marginStart="52.75dp"
-                    android:src="@drawable/fluent_drop_16_filled" />
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/some_id3"
+            android:textStyle="bold"
+            android:textAppearance="@style/some_id2" />
 
-                <TextView
-                    android:id="@+id/humidityTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginStart="9.75dp"
-                    android:text="@string/some_id3"
-                    android:textAppearance="@style/some_id2" />
-                <ImageView
-                    android:id="@+id/arrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="10dp"
-                    android:src="@drawable/arrow_today_tomorrow_screen"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:rotation="180"
+            android:src="@drawable/arrow_today_tomorrow_screen" />
 
-            </LinearLayout>
-
-        </LinearLayout>
+    </LinearLayout>
         <ImageView
             android:id="@+id/bottomLine"
-            android:layout_width="342dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bottom_line"
-            android:layout_marginStart="24dp"
-            />
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:src="@drawable/baseline_today_screen" />
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
@@ -102,13 +95,14 @@
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="342dp"
-                android:layout_height="213dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginEnd="24dp"
-                android:elevation="4dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginBottom="41dp"
+                android:paddingBottom="30dp"
+                android:elevation="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="45dp"
                 app:cardCornerRadius="8dp"
                 android:visibility="gone">
                 <GridLayout
@@ -131,12 +125,10 @@
 
                             <TextView
                                 android:id="@+id/temp_percepita"
-                                android:layout_width="68dp"
-                                android:layout_height="18dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:layout_marginStart="18dp"
-                                android:layout_marginEnd="112dp"
                                 android:layout_marginTop="18dp"
-                                android:layout_marginBottom="1dp"
                                 android:text="@string/percepita"
                                 android:textAppearance="@style/percepita" />
 
@@ -319,4 +311,3 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>

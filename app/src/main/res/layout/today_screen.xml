@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F0EFFF">
+    android:background="@color/app_background">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"
-        tools:itemCount="5"
-        tools:listitem="@layout/item_today_screen" />
+        android:layoutAnimation="@anim/reciclerview_animation"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_today_screen"
+        android:paddingBottom="@dimen/_60dp"/>
 
 </LinearLayout>
 

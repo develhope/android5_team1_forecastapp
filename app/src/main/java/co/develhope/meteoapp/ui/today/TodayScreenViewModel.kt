@@ -35,7 +35,6 @@ class TodayScreenViewModel : ViewModel() {
                         date
                     )
                     _todayResult.value = TodayResult.Result(todayHourlyForecast, place, date)
-
                 }
             }catch (e: Exception) {
                 e.printStackTrace()

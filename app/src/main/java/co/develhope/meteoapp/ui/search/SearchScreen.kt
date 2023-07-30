@@ -10,8 +10,9 @@ import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.MyApplicationMeteo
+import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.SearchScreenBinding
-
+import co.develhope.meteoapp.network.local.Place
 
 class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding
@@ -60,10 +61,11 @@ class SearchScreen : Fragment() {
                 Log.d("Change","$newText")
                 if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
                 } else {Log.d("rec-searchers","Testing else")
-                adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
-                MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
+                    adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
+                    MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
                 return true
             }
         })
     }
 }
+

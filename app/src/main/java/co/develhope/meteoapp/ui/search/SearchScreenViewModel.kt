@@ -1,6 +1,7 @@
 package co.develhope.meteoapp.ui.search
 
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,9 +13,8 @@ import kotlinx.coroutines.launch
 
 class SearchScreenViewModel : ViewModel() {
 
-    val cityListLiveData = MutableLiveData<List<Place>>()
+    private val cityListLiveData = MutableLiveData<List<Place>>()
     val _cityListLiveData : LiveData<List<Place>> = cityListLiveData
-    var recentSearches = MyApplicationMeteo.recentSearchesList
 
     fun searchCity (city: String) {
         viewModelScope.launch {
@@ -25,5 +25,17 @@ class SearchScreenViewModel : ViewModel() {
                 e.printStackTrace()
             }
         }
+    }
+    fun onCityClicked(item: Place) {
+        MyApplicationMeteo.preferences?.savePrefPlace(item)
+        Log.d("pref-place", "${MyApplicationMeteo.preferences?.getPrefPlace()}")
+        if (MyApplicationMeteo.recentSearchesList.size >= 10) MyApplicationMeteo.recentSearchesList.removeLast()
+        if (!MyApplicationMeteo.recentSearchesList.contains(item)) {
+            MyApplicationMeteo.recentSearchesList.add(item)
+        } else {
+            MyApplicationMeteo.recentSearchesList.remove(item)
+            MyApplicationMeteo.recentSearchesList.add(item)
+        }
+
     }
 }
