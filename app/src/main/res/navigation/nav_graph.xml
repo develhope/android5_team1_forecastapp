@@ -29,6 +29,9 @@
         android:name="co.develhope.meteoapp.ui.search.SearchScreen"
         android:label="Search Screen"
         tools:layout="@layout/search_screen">
+        <action
+            android:id="@+id/action_searchScreen_to_homeScreen"
+            app:destination="@id/homeScreen" />
     </fragment>
     <fragment
         android:id="@+id/errorScreen"

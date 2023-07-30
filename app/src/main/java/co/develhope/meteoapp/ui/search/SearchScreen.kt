@@ -10,19 +10,20 @@ import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.MyApplicationMeteo
+import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.SearchScreenBinding
-
+import co.develhope.meteoapp.network.local.Place
 
 class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding
     private lateinit var viewModel : SearchScreenViewModel
     private lateinit var adapter: SearchScreenAdapter
-    private var recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
-
+    var recentSearches = MyApplicationMeteo.preferences?.getRecentSearch()!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
+
     }
 
     override fun onCreateView(
@@ -60,11 +61,23 @@ class SearchScreen : Fragment() {
                 Log.d("Change","$newText")
                 if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
                 } else {Log.d("rec-searchers","Testing else")
-                adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
-                MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
-
+                    adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
+                    MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
                 return true
             }
         })
     }
+    fun onCityClicked(item: Place) {
+        MyApplicationMeteo.preferences?.savePrefPlace(item)
+        Log.d("pref-place", "${MyApplicationMeteo.preferences?.getPrefPlace()}")
+        if (MyApplicationMeteo.recentSearchesList.size >= 10) MyApplicationMeteo.recentSearchesList.removeLast()
+        if (!MyApplicationMeteo.recentSearchesList.contains(item)) {
+            MyApplicationMeteo.recentSearchesList.add(item)
+        } else {
+            MyApplicationMeteo.recentSearchesList.remove(item)
+            MyApplicationMeteo.recentSearchesList.add(item)
+        }
+
+    }
 }
+
