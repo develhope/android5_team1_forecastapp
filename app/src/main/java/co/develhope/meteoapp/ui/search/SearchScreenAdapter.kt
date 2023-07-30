@@ -18,13 +18,10 @@ class SearchScreenAdapter(private var list: List<Place>) : RecyclerView.Adapter<
     inner class ViewHolder(private var binding: SearchScreenItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun onBind(item: Place){
             binding.searchItemCity.text = item.city.plus(",").plus(item.region)
-
-        }
-
-        fun saveCity(item: Place){
             binding.searchItem.setOnClickListener{
-              SearchScreen().onCityClicked(item)
+                SearchScreenViewModel().onCityClicked(item)
             }
+
         }
     }
 
@@ -38,7 +35,6 @@ class SearchScreenAdapter(private var list: List<Place>) : RecyclerView.Adapter<
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(list[position])
-        holder.saveCity(list[position])
     }
 
     @SuppressLint("NotifyDataSetChanged")

@@ -67,17 +67,5 @@ class SearchScreen : Fragment() {
             }
         })
     }
-    fun onCityClicked(item: Place) {
-        MyApplicationMeteo.preferences?.savePrefPlace(item)
-        Log.d("pref-place", "${MyApplicationMeteo.preferences?.getPrefPlace()}")
-        if (MyApplicationMeteo.recentSearchesList.size >= 10) MyApplicationMeteo.recentSearchesList.removeLast()
-        if (!MyApplicationMeteo.recentSearchesList.contains(item)) {
-            MyApplicationMeteo.recentSearchesList.add(item)
-        } else {
-            MyApplicationMeteo.recentSearchesList.remove(item)
-            MyApplicationMeteo.recentSearchesList.add(item)
-        }
-
-    }
 }
 
