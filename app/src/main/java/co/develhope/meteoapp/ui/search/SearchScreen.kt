@@ -62,6 +62,7 @@ class SearchScreen : Fragment() {
                 } else {Log.d("rec-searchers","Testing else")
                 adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
                 MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
+
                 return true
             }
         })

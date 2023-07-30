@@ -62,11 +62,11 @@
             android:id="@+id/humidityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="9.75dp"
+            android:layout_marginStart="1dp"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
-            android:paddingStart="4dp"
             android:text="@string/some_id3"
+            android:textStyle="bold"
             android:textAppearance="@style/some_id2" />
 
         <ImageView

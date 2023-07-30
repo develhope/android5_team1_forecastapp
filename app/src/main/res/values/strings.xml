@@ -39,7 +39,7 @@
     <string name="time" translatable="false">%s:00</string>
     <string name="type" translatable="false">type</string>
     <string name="temp" translatable="false">%s C°</string>
-    <string name="umidity" translatable="false">%s %%</string>
+    <string name="umidity" translatable="false">%s%%</string>
     <!---string card titles-->
     <string name="sp_percepita">Percepita</string>
     <string name="sp_UV">Indice UV</string>
@@ -48,12 +48,12 @@
     <string name="copertura2">Copertura</string>
     <string name="pioggia2">Pioggia</string>
     <!--- string card data-->
-    <string name="percepitaCard"> %s °</string>
+    <string name="percepitaCard">%s°</string>
     <string name="uvCard">%s</string>
-    <string name="umiditaCard">%s %%</string>
+    <string name="umiditaCard">%s%%</string>
     <string name="ventoCard">SSE %s Km/h</string>
-    <string name="coperturaCard">%s %%</string>
-    <string name="pioggiaCard">%s cm</string>
+    <string name="coperturaCard">%s%%</string>
+    <string name="pioggiaCard">%scm</string>
     <string name="tv_temperature">%d C°</string>
 
 
