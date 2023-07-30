@@ -82,4 +82,9 @@
     <string name="Domani_english">Tomorrow</string>
     <string name="Cerca_english">Search</string>
     <string name="Riprova_english">Retry</string>
+    <string name="oggi">Oggi</string>
+    <string name="_10_09">10/09</string>
+    <string name="min">min</string>
+    <string name="max">max</string>
+    <string name="precip">precip.</string>
 </resources>

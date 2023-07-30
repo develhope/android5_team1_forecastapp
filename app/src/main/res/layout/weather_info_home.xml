@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/weather_info_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -10,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="@dimen/margin_bottom"
         android:background="@drawable/frame_home">
 
         <LinearLayout
@@ -23,21 +22,20 @@
                 android:id="@+id/weather_info_weekday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:layout_marginStart="18dp"
-                android:paddingTop="18dp"
-                android:text="Oggi"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:layout_marginStart="@dimen/margin_start"
+                android:paddingTop="@dimen/margin_start"
+                android:text="@string/oggi"
                 android:textColor="@color/white"
                 android:textSize="@dimen/weekday_home" />
             <TextView
                 android:id="@+id/weather_info_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:paddingStart="18dp"
-                android:paddingTop="3dp"
-                android:paddingEnd="18dp"
-                android:text="10/09"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:paddingStart="@dimen/margin_start"
+                android:paddingTop="@dimen/padding_top"
+                android:paddingEnd="@dimen/margin_start"
                 android:textColor="@color/white"
                 android:textSize="@dimen/date_home" />
         </LinearLayout>
@@ -52,17 +50,16 @@
                 android:id="@+id/weather_info_temp_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="18dp"
-                android:text="22°"
+                android:layout_marginEnd="@dimen/margin_end_72"
+                android:paddingTop="@dimen/padding_top_"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:paddingTop="3dp"
-                android:text="min"
+                android:layout_marginEnd="@dimen/margin_end"
+                android:paddingTop="@dimen/padding_top"
+                android:text="@string/min"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_text_home" />
         </LinearLayout>
@@ -77,16 +74,15 @@
                 android:id="@+id/weather_info_temp_max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:text="31°"
+                android:paddingTop="@dimen/padding_top_"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
-                android:text="max"
+                android:layout_marginEnd="@dimen/margin_end_72"
+                android:paddingTop="@dimen/padding_top_"
+                android:text="@string/max"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_text_home" />
         </LinearLayout>
@@ -101,16 +97,15 @@
                 android:id="@+id/weather_info_wind_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:text="12kmh"
+                android:paddingTop="@dimen/margin_start"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
-                android:text="vento"
+                android:layout_marginEnd="@dimen/margin_end_72"
+                android:paddingTop="@dimen/padding_top"
+                android:text="@string/vento"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_text_home" />
         </LinearLayout>
@@ -126,15 +121,14 @@
                 android:id="@+id/weather_info_rain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:text="0 mm"
+                android:paddingTop="@dimen/padding_top_"
                 android:textColor="@color/white"
                 android:textSize="@dimen/big_text_home" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:text="precip."
+                android:paddingTop="@dimen/padding_top"
+                android:text="@string/precip"
                 android:textColor="@color/white"
                 android:textSize="@dimen/small_text_home" />
 
@@ -146,8 +140,8 @@
             android:layout_width="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_start"
             />
     </GridLayout>
 
