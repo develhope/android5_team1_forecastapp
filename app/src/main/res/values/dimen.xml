@@ -25,4 +25,13 @@
     <dimen name="margin_end_texview">72dp</dimen>
     <dimen name="padding_top_textview2">2dp</dimen>
 
+
+    <!-- Weather info Home -->
+    <dimen name="margin_bottom">10dp</dimen>
+    <dimen name="margin_end">40dp</dimen>
+    <dimen name="margin_start">18dp</dimen>
+    <dimen name="padding_top">3dp</dimen>
+    <dimen name="padding_top_">18dp</dimen>
+    <dimen name="margin_end_72">72dp</dimen>
+    
 </resources>
