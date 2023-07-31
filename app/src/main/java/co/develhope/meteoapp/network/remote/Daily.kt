@@ -1,7 +1,7 @@
 package co.develhope.meteoapp.network.remote
 
-import co.develhope.meteoapp.network.local.WeatherSummary
-import co.develhope.meteoapp.network.local.getWeatherType
+import co.develhope.meteoapp.data.local.WeatherSummary
+import co.develhope.meteoapp.data.local.getWeatherType
 import com.google.gson.annotations.SerializedName
 import org.threeten.bp.OffsetDateTime
 

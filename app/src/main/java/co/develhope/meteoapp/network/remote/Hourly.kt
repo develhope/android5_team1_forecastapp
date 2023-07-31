@@ -1,10 +1,10 @@
 package co.develhope.meteoapp.network.remote
 
-import co.develhope.meteoapp.network.local.CardSpecificDay
-import co.develhope.meteoapp.network.local.HourlySpecificDay
-import co.develhope.meteoapp.network.local.getWeatherType
-import co.develhope.meteoapp.network.local.HourlyForecast
-import co.develhope.meteoapp.network.local.WeatherType
+import co.develhope.meteoapp.data.local.CardSpecificDay
+import co.develhope.meteoapp.data.local.HourlySpecificDay
+import co.develhope.meteoapp.data.local.getWeatherType
+import co.develhope.meteoapp.data.local.HourlyForecast
+import co.develhope.meteoapp.data.local.WeatherType
 import com.google.gson.annotations.SerializedName
 import org.threeten.bp.OffsetDateTime
 

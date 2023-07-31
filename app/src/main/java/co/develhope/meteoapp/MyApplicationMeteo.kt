@@ -1,7 +1,7 @@
 package co.develhope.meteoapp
 
 import android.app.Application
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 
 class MyApplicationMeteo : Application() {
 

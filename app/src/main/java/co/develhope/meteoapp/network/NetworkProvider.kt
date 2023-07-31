@@ -1,10 +1,10 @@
 package co.develhope.meteoapp.network
 
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.network.service.GeocodingService
 import co.develhope.meteoapp.network.service.WeatherAPI
-import co.develhope.meteoapp.network.local.HourlyForecast
-import co.develhope.meteoapp.network.local.WeatherSummary
+import co.develhope.meteoapp.data.local.HourlyForecast
+import co.develhope.meteoapp.data.local.WeatherSummary
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -48,7 +48,7 @@ class NetworkProvider {
         .build()
 
     val weatherAPI: WeatherAPI = retrofitWeather.create(WeatherAPI::class.java)
-    val geocodingService: GeocodingService = retrofitGeocoding.create(GeocodingService::class.java)
+    private val geocodingService: GeocodingService = retrofitGeocoding.create(GeocodingService::class.java)
 
     suspend fun getDailySummary(
         latitude: Double,

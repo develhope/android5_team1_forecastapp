@@ -1,6 +1,6 @@
 package co.develhope.meteoapp.ui.search
 
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 
 sealed class SearchInput(){
 

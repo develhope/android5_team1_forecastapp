@@ -16,11 +16,11 @@
         android:id="@+id/home_screen_second_part"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="@dimen/_15dp"
         android:layout_marginBottom="@dimen/_10dp"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingVertical="5dp">
+        android:paddingVertical="@dimen/_5dp">
 
         <TextView
             android:id="@+id/hourTextView"
@@ -32,9 +32,9 @@
 
         <ImageView
             android:id="@+id/weatherImageView"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="45dp"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_marginStart="@dimen/_45dp"
             android:scaleType="centerInside"
             android:src="@drawable/sun" />
 
@@ -43,9 +43,9 @@
             android:layout_width="wrap_content"
             android:text="@string/temp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginStart="@dimen/_45dp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
             android:textAppearance="@style/some_id2"
             android:textStyle="bold" />
 
@@ -53,25 +53,25 @@
             android:id="@+id/humidityImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginStart="@dimen/_45dp"
+            android:layout_marginTop="@dimen/_7dp"
+            android:layout_marginBottom="@dimen/_7dp"
             android:src="@drawable/fluent_drop_16_filled" />
 
         <TextView
             android:id="@+id/humidityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginStart="@dimen/_1dp"
+            android:layout_marginTop="@dimen/_4dp"
+            android:layout_marginBottom="@dimen/_4dp"
             android:text="@string/some_id3"
             android:textStyle="bold"
             android:textAppearance="@style/some_id2" />
 
         <ImageView
             android:id="@+id/arrow"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bottom_line"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="@dimen/_20dp"
             android:layout_marginEnd="@dimen/_10dp"
             android:src="@drawable/baseline_today_screen" />
         <LinearLayout
@@ -97,13 +97,13 @@
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
-                android:paddingBottom="30dp"
-                android:elevation="8dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="45dp"
-                app:cardCornerRadius="8dp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:paddingBottom="@dimen/_30dp"
+                android:elevation="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginBottom="@dimen/_45dp"
+                app:cardCornerRadius="@dimen/_8dp"
                 android:visibility="gone">
                 <GridLayout
                     android:id="@+id/frame"
@@ -127,18 +127,18 @@
                                 android:id="@+id/temp_percepita"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="18dp"
-                                android:layout_marginTop="18dp"
+                                android:layout_marginStart="@dimen/_18dp"
+                                android:layout_marginTop="@dimen/_18dp"
                                 android:text="@string/percepita"
                                 android:textAppearance="@style/percepita" />
 
                             <TextView
                                 android:id="@+id/percepitaTextView"
-                                android:layout_width="25dp"
-                                android:layout_height="19dp"
-                                android:layout_marginBottom="14dp"
-                                android:layout_marginStart="18dp"
-                                android:layout_marginEnd="151dp"
+                                android:layout_width="@dimen/_25dp"
+                                android:layout_height="@dimen/_19dp"
+                                android:layout_marginBottom="@dimen/_14dp"
+                                android:layout_marginStart="@dimen/_18dp"
+                                android:layout_marginEnd="@dimen/_151dp"
                                 android:textAppearance="@style/some_id4" />
                         </LinearLayout>
 
@@ -149,30 +149,30 @@
 
                             <TextView
                                 android:id="@+id/indice"
-                                android:layout_width="69dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="18dp"
-                                android:layout_marginEnd="75dp"
-                                android:layout_marginBottom="1dp"
+                                android:layout_width="@dimen/_69dp"
+                                android:layout_height="@dimen/_18dp"
+                                android:layout_marginTop="@dimen/_18dp"
+                                android:layout_marginEnd="@dimen/_75dp"
+                                android:layout_marginBottom="@dimen/_1dp"
                                 android:text="@string/indice_uv"
                                 android:textAppearance="@style/indice_uv" />
 
                             <TextView
                                 android:id="@+id/indiceTextView"
-                                android:layout_width="35dp"
-                                android:layout_height="19dp"
-                                android:layout_marginEnd="109dp"
-                                android:layout_marginBottom="14dp"
+                                android:layout_width="@dimen/_35dp"
+                                android:layout_height="@dimen/_19dp"
+                                android:layout_marginEnd="@dimen/_109dp"
+                                android:layout_marginBottom="@dimen/_14dp"
                                 android:textAppearance="@style/some_id5" />
                         </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:layout_width="303.5dp"
+                        android:layout_width="@dimen/_303dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="18.5dp"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_18_5dp"
                         android:background="@drawable/bottom_line"
                         android:layout_column="0"
                         android:layout_row="1"
@@ -191,22 +191,22 @@
 
                             <TextView
                                 android:id="@+id/humidity"
-                                android:layout_width="55dp"
-                                android:layout_height="18dp"
-                                android:layout_marginStart="18dp"
-                                android:layout_marginEnd="125dp"
-                                android:layout_marginTop="14dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_width="@dimen/_55dp"
+                                android:layout_height="@dimen/_18dp"
+                                android:layout_marginStart="@dimen/_18dp"
+                                android:layout_marginEnd="@dimen/_125dp"
+                                android:layout_marginTop="@dimen/_14dp"
+                                android:layout_marginBottom="@dimen/_4dp"
                                 android:text="@string/umidit_"
                                 android:textAppearance="@style/umidit_" />
 
                             <TextView
                                 android:id="@+id/humidityPercentage"
-                                android:layout_marginStart="18dp"
-                                android:layout_width="35dp"
-                                android:layout_height="19dp"
-                                android:layout_marginEnd="72.5dp"
-                                android:layout_marginBottom="19dp"
+                                android:layout_marginStart="@dimen/_18dp"
+                                android:layout_width="@dimen/_35dp"
+                                android:layout_height="@dimen/_19dp"
+                                android:layout_marginEnd="@dimen/_72dp"
+                                android:layout_marginBottom="@dimen/_19dp"
                                 android:textAppearance="@style/some_id6" />
                         </LinearLayout>
 
@@ -219,29 +219,29 @@
                                 android:id="@+id/vento"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="14dp"
-                                android:layout_marginEnd="102dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="@dimen/_14dp"
+                                android:layout_marginEnd="@dimen/_102dp"
+                                android:layout_marginBottom="@dimen/_4dp"
                                 android:text="@string/vento"
                                 android:textAppearance="@style/vento" />
 
                             <TextView
                                 android:id="@+id/ventoTextView"
-                                android:layout_width="84dp"
-                                android:layout_height="19dp"
-                                android:layout_marginBottom="14dp"
-                                android:layout_marginEnd="60dp"
+                                android:layout_width="@dimen/_84dp"
+                                android:layout_height="@dimen/_19dp"
+                                android:layout_marginBottom="@dimen/_14dp"
+                                android:layout_marginEnd="@dimen/_60dp"
                                 android:textAppearance="@style/sse_7km_h" />
                         </LinearLayout>
 
 
                     </LinearLayout>
                     <ImageView
-                        android:layout_width="303.5dp"
+                        android:layout_width="@dimen/_303dp"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom_line"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="18.5dp"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:layout_marginEnd="@dimen/_18dp"
                         android:layout_column="0"
                         android:layout_row="3"
                         />
@@ -258,22 +258,22 @@
 
                             <TextView
                                 android:id="@+id/copertura"
-                                android:layout_width="73dp"
-                                android:layout_height="18dp"
-                                android:layout_marginTop="9dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginEnd="107dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_width="@dimen/_73dp"
+                                android:layout_height="@dimen/_18dp"
+                                android:layout_marginTop="@dimen/_9dp"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:layout_marginEnd="@dimen/_107dp"
+                                android:layout_marginBottom="@dimen/_4dp"
                                 android:text="@string/copertura"
                                 android:textAppearance="@style/copertura" />
 
                             <TextView
                                 android:id="@+id/coperturaTextView"
-                                android:layout_width="34dp"
-                                android:layout_height="19dp"
-                                android:layout_marginStart="20dp"
-                                android:layout_marginEnd="146dp"
-                                android:layout_marginBottom="19dp"
+                                android:layout_width="@dimen/_34dp"
+                                android:layout_height="@dimen/_19dp"
+                                android:layout_marginStart="@dimen/_20dp"
+                                android:layout_marginEnd="@dimen/_146dp"
+                                android:layout_marginBottom="@dimen/_19dp"
                                 android:textAppearance="@style/some_id7" />
                         </LinearLayout>
 
@@ -284,18 +284,18 @@
 
                             <TextView
                                 android:id="@+id/pioggia"
-                                android:layout_marginTop="9dp"
-                                android:layout_marginEnd="89dp"
-                                android:layout_marginBottom="4dp"
-                                android:layout_width="53dp"
+                                android:layout_marginTop="@dimen/_9dp"
+                                android:layout_marginEnd="@dimen/_89dp"
+                                android:layout_marginBottom="@dimen/_4dp"
+                                android:layout_width="@dimen/_53dp"
                                 android:layout_height="18dp"
                                 android:text="@string/pioggia"
                                 android:textAppearance="@style/pioggia" />
 
                             <TextView
                                 android:id="@+id/pioggiaTextView"
-                                android:layout_marginEnd="89dp"
-                                android:layout_marginBottom="19dp"
+                                android:layout_marginEnd="@dimen/_89dp"
+                                android:layout_marginBottom="@dimen/_19dp"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="@style/cm" />

@@ -1,6 +1,6 @@
 package co.develhope.meteoapp.network.remote
 
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 import com.google.gson.annotations.SerializedName
 
 data class CityInfo(
