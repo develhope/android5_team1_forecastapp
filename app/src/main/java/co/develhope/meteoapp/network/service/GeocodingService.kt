@@ -1,6 +1,6 @@
 package co.develhope.meteoapp.network.service
 
-import co.develhope.meteoapp.remote.CityInfo
+import co.develhope.meteoapp.network.remote.CityInfo
 import retrofit2.http.GET
 import retrofit2.http.Query
 

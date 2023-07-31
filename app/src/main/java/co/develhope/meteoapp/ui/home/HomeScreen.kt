@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.HomeScreenBinding
-import co.develhope.meteoapp.remote.WeeklySummary
+import co.develhope.meteoapp.network.remote.WeeklySummary
 
 
 class HomeScreen : Fragment() {
@@ -46,7 +46,7 @@ class HomeScreen : Fragment() {
             val tempMax = item.daily.temperature2mMax
             binding.homeScreenTempMax.text = tempMax[0].toInt().toString().plus("°")
             val windSpeed = item.daily.windspeed10mMax
-            binding.homeScreenWindSpeed.text = windSpeed[0].toString().plus("Km/h")
+            binding.homeScreenWindSpeed.text = windSpeed[0].toString().plus("km/h")
             val rainSum = item.daily.rainSum
             binding.homeScreenRainSum.text = rainSum[0].toString().plus("mm")
             val weatherCondition = item.daily.weathercode

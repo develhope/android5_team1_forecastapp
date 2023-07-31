@@ -15,7 +15,7 @@ import co.develhope.meteoapp.databinding.TomorrowScreenBinding
 import co.develhope.meteoapp.network.local.HourlyForecast
 import co.develhope.meteoapp.network.local.Place
 import co.develhope.meteoapp.network.local.TodayInfo
-import co.develhope.meteoapp.remote.ForecastData
+import co.develhope.meteoapp.network.remote.ForecastData
 import co.develhope.meteoapp.ui.today.TodayTomorrowInfoAdapter
 import org.threeten.bp.OffsetDateTime
 

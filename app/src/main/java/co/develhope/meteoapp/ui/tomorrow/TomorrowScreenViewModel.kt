@@ -10,7 +10,7 @@ import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.network.NetworkProvider
 import co.develhope.meteoapp.network.local.HourlyForecast
 import co.develhope.meteoapp.network.local.Place
-import co.develhope.meteoapp.remote.ForecastData
+import co.develhope.meteoapp.network.remote.ForecastData
 import kotlinx.coroutines.launch
 import org.threeten.bp.OffsetDateTime
 

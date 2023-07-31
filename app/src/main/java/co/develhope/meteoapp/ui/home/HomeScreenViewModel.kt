@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.network.NetworkProvider
-import co.develhope.meteoapp.remote.WeeklySummary
+import co.develhope.meteoapp.network.remote.WeeklySummary
 import kotlinx.coroutines.launch
 
 class HomeScreenViewModel : ViewModel() {

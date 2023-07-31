@@ -1,8 +1,8 @@
 package co.develhope.meteoapp.network.service
 
-import co.develhope.meteoapp.remote.DailySummary
-import co.develhope.meteoapp.remote.ForecastData
-import co.develhope.meteoapp.remote.WeeklySummary
+import co.develhope.meteoapp.network.remote.DailySummary
+import co.develhope.meteoapp.network.remote.ForecastData
+import co.develhope.meteoapp.network.remote.WeeklySummary
 import org.threeten.bp.LocalDate
 import retrofit2.Response
 import retrofit2.http.GET
