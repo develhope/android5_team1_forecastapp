@@ -48,4 +48,5 @@
     <dimen name="_153dp">153dp</dimen>
     <dimen name="_200dp">200dp</dimen>
     <dimen name="_175dp">175dp</dimen>
+    <dimen name="_16sp">16sp</dimen>
 </resources>
