@@ -1,4 +1,4 @@
-package co.develhope.meteoapp.network.local
+package co.develhope.meteoapp.data.local
 
 data class Place(
     val city: String,

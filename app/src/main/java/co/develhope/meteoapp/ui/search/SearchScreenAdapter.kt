@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.SearchScreenItemBinding
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.ui.home.HomeScreen
 
 
