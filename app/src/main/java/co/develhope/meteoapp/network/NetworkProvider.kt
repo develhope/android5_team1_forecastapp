@@ -63,6 +63,17 @@ class NetworkProvider {
             endDate = end_Date.toLocalDate()
         ).body()?.hourly?.toDomain() ?: emptyList()
     }
+
+    suspend fun getWeeklySummary(
+        latitude: Double,
+        longitude: Double,
+    ) : List<WeatherSummary> {
+        return weatherAPI.getWeeklyWeather(
+            latitude = latitude,
+            longitude = longitude,
+        ).body()?.daily?.toDomain() ?: emptyList()
+    }
+
     suspend fun getPlace(place: String, language: String): List<Place> {
         return geocodingService.getCityInfo(
             name = place,

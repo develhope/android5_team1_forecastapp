@@ -35,8 +35,15 @@ interface WeatherAPI {
     suspend fun getWeeklyWeather(
         @Query("latitude") latitude: Double,
         @Query("longitude") longitude: Double,
-        @Query("daily") daily: String,
-        @Query("current_weather") currentWeather: Boolean,
-        @Query("timezone") timezone: String
-    ): WeeklySummary
+        @Query("daily") daily: List<String> = listOf(
+            "time",
+            "weathercode",
+            "temperature_2m_max",
+            "temperature_2m_min",
+            "rain_sum",
+            "windspeed_10m_max"
+        ) ,
+        @Query("current_weather") currentWeather: Boolean = true,
+        @Query("timezone") timezone: String = "auto"
+    ): Response<WeeklySummary>
 }
