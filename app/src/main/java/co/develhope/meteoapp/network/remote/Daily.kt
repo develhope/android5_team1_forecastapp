@@ -17,10 +17,23 @@ data class Daily(
     val temperature2mMax: List<Double>,
     @SerializedName("temperature_2m_min")
     val temperature2mMin: List<Double>,
-    var time: List<String>,
+    val time: List<OffsetDateTime>,
     @SerializedName("weathercode")
     val weathercode: List<Int>,
     @SerializedName("windspeed_10m_max")
     val windspeed10mMax : List<Double>,
     val dayWeek: List<String>
-)
+) {
+    fun toDomain(): List<WeatherSummary> {
+        return List(this.time.size) { index ->
+            WeatherSummary(
+                weatherType = this.weathercode.getOrNull(index).getWeatherType(),
+                wind = this.windspeed10mMax.getOrNull(index)?.toInt() ?:0,
+                tempMin = this.temperature2mMin.getOrNull(index)?.toInt() ?:0,
+                tempMax = this.temperature2mMax.getOrNull(index)?.toInt() ?:0,
+                rain = this.rainSum.getOrNull(index)?.toInt() ?:0,
+                date = time
+            )
+        }
+    }
+}
