@@ -64,14 +64,9 @@ class TodayScreen : Fragment() {
         place: Place,
         date: OffsetDateTime
     ): List<TodayInfo> {
-        val returnList = mutableListOf<TodayInfo>()
-
-        returnList.add(TodayInfo.ResultDayTitle(place, date))
-        val hours: List<TodayInfo.ResultDayHourly> = list.map {
-            TodayInfo.ResultDayHourly(it)
+        return mutableListOf<TodayInfo>().apply {
+            add(TodayInfo.ResultDayTitle(place, date))
+            addAll(list.map { TodayInfo.ResultDayHourly(it) })
         }
-        returnList.addAll(hours)
-
-        return returnList
     }
 }
