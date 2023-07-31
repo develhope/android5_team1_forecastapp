@@ -7,8 +7,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.network.NetworkProvider
-import co.develhope.meteoapp.network.local.Place
-import co.develhope.meteoapp.network.local.HourlyForecast
+import co.develhope.meteoapp.data.local.Place
+import co.develhope.meteoapp.data.local.HourlyForecast
 import kotlinx.coroutines.launch
 import org.threeten.bp.OffsetDateTime
 

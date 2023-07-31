@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/app_background"
     android:orientation="vertical"
-    tools:context=".ErrorScreen"
+    tools:context=".ui.error.ErrorScreen"
     android:gravity="center">
 
     <ImageView

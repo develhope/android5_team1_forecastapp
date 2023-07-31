@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.SearchScreenBinding
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 
 class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding

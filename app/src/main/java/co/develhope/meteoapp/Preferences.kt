@@ -1,7 +1,7 @@
 package co.develhope.meteoapp
 
 import android.content.Context
-import co.develhope.meteoapp.network.local.Place
+import co.develhope.meteoapp.data.local.Place
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.ItemTodayScreenBinding
 import co.develhope.meteoapp.databinding.SpecificDayBinding
-import co.develhope.meteoapp.network.local.TodayInfo
+import co.develhope.meteoapp.data.local.TodayInfo
 import co.develhope.meteoapp.utils.getLocalizedDay
 import co.develhope.meteoapp.utils.getLocalizedMonth
 

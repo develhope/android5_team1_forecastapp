@@ -1,9 +1,6 @@
-package co.develhope.meteoapp.utils
+package co.develhope.meteoapp.data
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import org.threeten.bp.OffsetDateTime
-import java.time.format.DateTimeFormatter
 
 object DataSource {
     private var specificData : OffsetDateTime? = null
