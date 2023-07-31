@@ -1,4 +1,4 @@
-package co.develhope.meteoapp
+package co.develhope.meteoapp.ui.error
 
 import android.os.Bundle
 import android.view.LayoutInflater

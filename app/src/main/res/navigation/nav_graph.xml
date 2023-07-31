@@ -10,18 +10,33 @@
         android:name="co.develhope.meteoapp.ui.home.HomeScreen"
         android:label="Home Screen"
         tools:layout="@layout/home_screen">
+        <action
+            android:id="@+id/action_home_screen_to_search_screen"
+            app:destination="@id/searchScreen"
+            app:popUpTo="@+id/home_screen"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
         android:id="@+id/todayScreen"
         android:name="co.develhope.meteoapp.ui.today.TodayScreen"
         android:label="Today Screen" >
+        <action
+            android:id="@+id/action_today_screen_to_search_screen"
+            app:destination="@id/searchScreen"
+            app:popUpTo="@+id/today_screen"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
         android:id="@+id/tomorrowScreen"
         android:name="co.develhope.meteoapp.ui.tomorrow.TomorrowScreen"
         android:label="Tomorrow Screen" >
+        <action
+            android:id="@+id/action_tomorrow_screen_to_search_screen"
+            app:destination="@id/searchScreen"
+            app:popUpTo="@+id/tomorrow_screen"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -30,12 +45,14 @@
         android:label="Search Screen"
         tools:layout="@layout/search_screen">
         <action
-            android:id="@+id/action_searchScreen_to_homeScreen"
-            app:destination="@id/homeScreen" />
+            android:id="@+id/action_search_screen_to_home_screen"
+            app:destination="@id/home_screen"
+            app:popUpTo="@+id/home_screen"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/errorScreen"
-        android:name="co.develhope.meteoapp.ErrorScreen"
+        android:name="co.develhope.meteoapp.ui.error.ErrorScreen"
         android:label="error_screen"
         tools:layout="@layout/error_screen" />
 </navigation>
