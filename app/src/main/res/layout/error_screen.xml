@@ -24,14 +24,13 @@
         android:gravity="center"
         android:text="@string/error_message"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="@dimen/textSize" />
 
     <Button
         android:id="@+id/retry_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginTop="@dimen/_27dp"
         android:backgroundTint="@color/night_blue"
         android:background="@drawable/error_button"
         android:layout_marginStart="@dimen/_24dp"
