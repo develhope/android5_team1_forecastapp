@@ -88,4 +88,6 @@
     <string name="min">min</string>
     <string name="max">max</string>
     <string name="precip">precip.</string>
+    <string name="domenica_11_settembre">Domenica 11 settembre</string>
+    <string name="domani">Domani,</string>
 </resources>

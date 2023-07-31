@@ -8,7 +8,6 @@
     android:background="#F0EFFF"
     >
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,33 +24,33 @@
                 android:id="@+id/palermo_sic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="42dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_42dp"
+                android:layout_marginEnd="@dimen/_24dp"
                 android:text="@string/palermo_sic"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="54dp"
+                android:layout_marginBottom="@dimen/_54dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="184dp"
-                    android:layout_height="25dp"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="2dp"
-                    android:text="Domani,"
+                    android:layout_width="@dimen/_184dp"
+                    android:layout_height="@dimen/_25dp"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:text="@string/domani"
                     android:textAppearance="@style/oggi_domeni"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/_20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/oggi_domeni"
-                    android:layout_width="184dp"
-                    android:layout_height="17dp"
-                    android:layout_marginStart="24dp"
-                    android:text="Domenica 11 settembre"
+                    android:layout_width="@dimen/_184dp"
+                    android:layout_height="@dimen/_17dp"
+                    android:layout_marginStart="@dimen/_24dp"
+                    android:text="@string/domenica_11_settembre"
                     android:textAppearance="@style/oggi_domeni"
                     android:textStyle="bold" />
             </LinearLayout>
