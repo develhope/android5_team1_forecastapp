@@ -6,6 +6,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import co.develhope.meteoapp.databinding.ActivityMainBinding
+import co.develhope.meteoapp.network.service.geopermission.Geolocalization
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         bottomNavView = binding.bottomNavigationMenu
+        Geolocalization.getCurrentPosition(this)
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
