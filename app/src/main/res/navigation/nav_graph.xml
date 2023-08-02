@@ -46,8 +46,8 @@
         tools:layout="@layout/search_screen">
         <action
             android:id="@+id/action_search_screen_to_home_screen"
-            app:destination="@id/home_screen"
-            app:popUpTo="@+id/home_screen"
+            app:destination="@id/homeScreen"
+            app:popUpTo="@+id/search_screen"
             app:popUpToInclusive="true"/>
     </fragment>
     <fragment
