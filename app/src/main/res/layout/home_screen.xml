@@ -12,11 +12,9 @@
         android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="24dp"
-        android:text="@string/palermo_sic"
-        android:textAppearance="@style/palermo_sic"
+        android:layout_margin="@dimen/_24dp"
+        android:text="@string/title_home_city_region"
+        android:textAppearance="@style/home_title"
         android:gravity="top"
         />
 
@@ -25,42 +23,33 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginHorizontal="24dp"
+        android:padding="18dp"
         android:background="@drawable/frame_home">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="126dp"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
+            android:layout_marginBottom="18dp"
             android:orientation="vertical">
         <TextView
             android:id="@+id/home_screen_day_of_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
-            android:paddingStart="18dp"
-            android:paddingTop="18dp"
-            android:text="Oggi"
-            android:textColor="@color/white"
-            android:textSize="@dimen/weekday_home" />
+            android:text="@string/oggi"
+            android:textAppearance="@style/home_info_big" />
         <TextView
             android:id="@+id/home_screen_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
-            android:paddingStart="18dp"
-            android:paddingTop="3dp"
-            android:paddingEnd="18dp"
-            android:text="28/06"
-            android:textColor="@color/white"
-            android:textSize="@dimen/date_home" />
+            android:text="@string/data"
+            android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="1"
@@ -73,15 +62,15 @@
             android:paddingTop="18dp"
             android:text="@string/tempmin"
             android:textColor="@color/white"
-            android:textSize="@dimen/big_text_home" />
+            android:textSize="@dimen/big_text_home" 
+            android:text="@string/tempmin"
+            android:textAppearance="@style/home_info_big" />
+          
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
-            android:paddingTop="3dp"
-            android:text="min"
-            android:textColor="@color/white"
-            android:textSize="@dimen/small_text_home" />
+            android:text="@string/text_temp_min"
+            android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,15 +86,14 @@
             android:paddingTop="18dp"
             android:text="@string/tempmax"
             android:textColor="@color/white"
-            android:textSize="@dimen/big_text_home" />
+            android:textSize="@dimen/big_text_home" 
+            android:text="@string/tempmax"
+            android:textAppearance="@style/home_info_big" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
-            android:paddingTop="3dp"
-            android:text="max"
-            android:textColor="@color/white"
-            android:textSize="@dimen/small_text_home" />
+            android:text="@string/text_temp_max"
+            android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -121,19 +109,19 @@
                 android:paddingTop="18dp"
                 android:text="@string/home_windspeed"
                 android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
+                android:textSize="@dimen/big_text_home" 
+                android:text="@string/home_windspeed"
+                android:textAppearance="@style/home_info_big" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="72dp"
-                android:paddingTop="3dp"
-                android:text="vento"
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
+                android:text="@string/home_wind"
+                android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="1"
@@ -143,17 +131,13 @@
                 android:id="@+id/home_screen_rain_sum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
                 android:text="@string/home_rain_sum"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" />
+                android:textAppearance="@style/home_info_big" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="3dp"
-                android:text="precip."
-                android:textColor="@color/white"
-                android:textSize="@dimen/small_text_home" />
+                android:text="@string/precip"
+                android:textAppearance="@style/home_info_small" />
 
         </LinearLayout>
         <ImageView
@@ -163,8 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="18dp"
+            android:maxWidth="126dp"
             />
     </GridLayout>
 
@@ -173,7 +156,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginTop="42dp"
         android:text="@string/prossimi_5"
         android:textAppearance="@style/prossimi_5"
@@ -181,11 +163,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_list"
+        android:layout_marginVertical="@dimen/_24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginEnd="@dimen/_24dp"
-        android:paddingBottom="@dimen/_60dp"
         tools:listitem="@layout/weather_info_home" />
 
 </LinearLayout>

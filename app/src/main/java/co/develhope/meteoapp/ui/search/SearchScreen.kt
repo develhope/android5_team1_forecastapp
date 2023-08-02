@@ -8,11 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.MyApplicationMeteo
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.SearchScreenBinding
 import co.develhope.meteoapp.data.local.Place
+import kotlinx.coroutines.launch
 
 class SearchScreen : Fragment() {
     private lateinit var binding: SearchScreenBinding
@@ -43,13 +46,13 @@ class SearchScreen : Fragment() {
 
         viewModel = ViewModelProvider(this)[SearchScreenViewModel::class.java]
 
-        adapter = SearchScreenAdapter(recentSearches)
+        adapter = SearchScreenAdapter(recentSearches.asReversed())
         binding.cityList.layoutManager = LinearLayoutManager(context)
         binding.cityList.adapter = adapter
 
         viewModel._cityListLiveData.observe(viewLifecycleOwner){
             Log.d("livedata","$it")
-            adapter.updateList(it)
+            binding.cityList.adapter = SearchScreenAdapter(it)
         }
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
@@ -61,11 +64,14 @@ class SearchScreen : Fragment() {
                 Log.d("Change","$newText")
                 if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
                 } else {Log.d("rec-searchers","Testing else")
-                    adapter.updateList(MyApplicationMeteo.recentSearchesList.asReversed())
-                    MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)}
+                    binding.cityList.adapter = SearchScreenAdapter(MyApplicationMeteo.preferences!!.getRecentSearch().asReversed())
+//                    MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)
+                      }
                 return true
             }
         })
     }
+
+
 }
 

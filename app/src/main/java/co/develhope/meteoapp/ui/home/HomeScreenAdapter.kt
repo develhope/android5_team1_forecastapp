@@ -12,17 +12,17 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.format.TextStyle
 import java.util.Locale
 
-class HomeScreenAdapter(val list: WeeklyResult.Result) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
+class HomeScreenAdapter(val list: WeeklyResult) : RecyclerView.Adapter<HomeScreenAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val binding: WeatherInfoHomeBinding) : RecyclerView.ViewHolder(binding.root){
-        fun onBind(item: WeeklyResult.Result, position: Int){
+        fun onBind(item: WeeklyResult, position: Int){
             binding.weatherInfoTempMin.text = item.list[position + 1].tempMin.toString().plus("°")
             binding.weatherInfoTempMax.text = item.list[position + 1].tempMax.toString().plus("°")
-            binding.weatherInfoWindSpeed.text = item.list[position + 1].wind.toString().plus("Km/h")
+            binding.weatherInfoWindSpeed.text = item.list[position + 1].wind.toString().plus("km/h")
             binding.weatherInfoRain.text = item.list[position + 1].rain.toString().plus("mm")
             binding.weatherInfoIcon.setImageResource(item.list[position + 1].weatherType.imageWeatherType())
-            binding.weatherInfoDate.text = item.date.dayOfMonth.toString().plus("/").plus(item.date.monthValue.toString())
-            binding.weatherInfoWeekday.text = item.date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ITALY)
+            binding.weatherInfoDate.text = item.list[position + 1].date.dayOfMonth.toString().plus("/").plus(item.list[position + 1].date.monthValue.toString())
+            binding.weatherInfoWeekday.text = item.list[position + 1].date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
         }
     }
 
