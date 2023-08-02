@@ -16,20 +16,20 @@
             android:layout_centerVertical="true"
             android:text="@string/city_search_item"
             android:textAppearance="@style/search_item_big"/>
-        <TextView
-            android:id="@+id/search_item_temp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:text="@string/temp_search_item"
-            android:textAppearance="@style/search_item_big"/>
-        <TextView
-            android:id="@+id/search_item_weather"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:text="@string/weather_search_item"
-            android:textAppearance="@style/search_item_small"/>
+<!--        <TextView-->
+<!--            android:id="@+id/search_item_temp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:text="@string/temp_search_item"-->
+<!--            android:textAppearance="@style/search_item_big"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/search_item_weather"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:text="@string/weather_search_item"-->
+<!--            android:textAppearance="@style/search_item_small"/>-->
 
 </RelativeLayout>

@@ -4,6 +4,7 @@ import android.content.Context
 import co.develhope.meteoapp.data.local.Place
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 
 class Preferences(context : Context) {
 
@@ -23,14 +24,34 @@ class Preferences(context : Context) {
         prefPlace.edit().putString("place", placePref).apply()
     }
 
+//    fun getRecentSearch(): MutableList<Place> {
+//        val jsonRecentSearch = preferencesRecentSearch.getString("recentSearch", null)
+//        return jsonRecentSearch?.let { gson.fromJson(it, Array<Place>::class.java)?.toMutableList() }
+//            ?: mutableListOf()
+//    }
+
+//    fun saveRecentSearch(place : List<Place>) {
+//        val recentSearch : String = Gson().toJson(place)
+//        preferencesRecentSearch.edit().putString("recentSearch", recentSearch).apply()
+//    }
+
     fun getRecentSearch(): MutableList<Place> {
-        val jsonRecentSearch = preferencesRecentSearch.getString("recentSearch", null)
-        return jsonRecentSearch?.let { gson.fromJson(it, Array<Place>::class.java)?.toMutableList() }
+        val gson = Gson()
+        val json = preferencesRecentSearch.getString("recentSearch", null)
+        val type = object : TypeToken<List<Place>>() {}.type
+        return gson.fromJson(json, type)
             ?: mutableListOf()
     }
 
-    fun saveRecentSearch(place : List<Place>) {
-        val recentSearch : String = Gson().toJson(place)
-        preferencesRecentSearch.edit().putString("recentSearch", recentSearch).apply()
+    fun saveRecentSearch(place: Place) {
+        val listRecent = getRecentSearch()
+        if (!listRecent.contains(place)) {
+            listRecent.add(place)
+        }
+        val editor = preferencesRecentSearch.edit()
+        val gson = Gson()
+        val json = gson.toJson(listRecent)
+        editor.putString("recentSearch", json)
+        editor.apply()
     }
 }
