@@ -1,9 +1,12 @@
 package co.develhope.meteoapp
 
 import android.os.Bundle
+import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import co.develhope.meteoapp.databinding.ActivityMainBinding
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
