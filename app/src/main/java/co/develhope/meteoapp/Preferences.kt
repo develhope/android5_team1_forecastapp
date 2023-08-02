@@ -47,6 +47,9 @@ class Preferences(context : Context) {
         val listRecent = getRecentSearch()
         if (!listRecent.contains(place)) {
             listRecent.add(place)
+        } else {
+            listRecent.remove(place)
+            listRecent.add(place)
         }
         val editor = preferencesRecentSearch.edit()
         val gson = Gson()

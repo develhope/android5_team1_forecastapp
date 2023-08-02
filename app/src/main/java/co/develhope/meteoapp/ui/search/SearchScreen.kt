@@ -65,7 +65,6 @@ class SearchScreen : Fragment() {
                 if(newText != null && newText.length >= 2 ) {viewModel.searchCity(newText)
                 } else {Log.d("rec-searchers","Testing else")
                     binding.cityList.adapter = SearchScreenAdapter(MyApplicationMeteo.preferences!!.getRecentSearch().asReversed())
-//                    MyApplicationMeteo.preferences!!.saveRecentSearch(MyApplicationMeteo.recentSearchesList)
                       }
                 return true
             }
