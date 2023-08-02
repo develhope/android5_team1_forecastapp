@@ -58,11 +58,6 @@
             android:id="@+id/home_screen_temp_min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="72dp"
-            android:paddingTop="18dp"
-            android:text="@string/tempmin"
-            android:textColor="@color/white"
-            android:textSize="@dimen/big_text_home" 
             android:text="@string/tempmin"
             android:textAppearance="@style/home_info_big" />
           
@@ -83,10 +78,6 @@
             android:id="@+id/home_screen_temp_max"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="18dp"
-            android:text="@string/tempmax"
-            android:textColor="@color/white"
-            android:textSize="@dimen/big_text_home" 
             android:text="@string/tempmax"
             android:textAppearance="@style/home_info_big" />
         <TextView
@@ -106,10 +97,6 @@
                 android:id="@+id/home_screen_wind_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="18dp"
-                android:text="@string/home_windspeed"
-                android:textColor="@color/white"
-                android:textSize="@dimen/big_text_home" 
                 android:text="@string/home_windspeed"
                 android:textAppearance="@style/home_info_big" />
 
