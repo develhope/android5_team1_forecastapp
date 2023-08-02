@@ -8,5 +8,5 @@ data class WeatherSummary(
     val tempMin: Int,
     val tempMax: Int,
     val rain: Int,
-    val date: List<OffsetDateTime>
+    val date: OffsetDateTime
 )

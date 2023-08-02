@@ -36,7 +36,6 @@ interface WeatherAPI {
         @Query("latitude") latitude: Double,
         @Query("longitude") longitude: Double,
         @Query("daily") daily: List<String> = listOf(
-            "time",
             "weathercode",
             "temperature_2m_max",
             "temperature_2m_min",

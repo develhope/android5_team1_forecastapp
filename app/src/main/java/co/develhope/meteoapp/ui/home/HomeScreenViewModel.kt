@@ -11,10 +11,7 @@ import co.develhope.meteoapp.network.NetworkProvider
 import kotlinx.coroutines.launch
 import org.threeten.bp.OffsetDateTime
 
-sealed class WeeklyResult() {
-    data class Result(val list: List<WeatherSummary>, val place: Place, val date: OffsetDateTime) :
-        WeeklyResult()
-}
+data class WeeklyResult(val list: List<WeatherSummary>, val place: Place)
 
 class HomeScreenViewModel : ViewModel() {
 
@@ -26,13 +23,12 @@ class HomeScreenViewModel : ViewModel() {
         viewModelScope.launch {
             try{
                 val place = MyApplicationMeteo.preferences?.getPrefPlace()
-                val date = OffsetDateTime.now()
-                if (place != null && date != null) {
+                if (place != null) {
                     val weeklyForecast = NetworkProvider().getWeeklySummary(
                         place.latitude,
                         place.longitude
                     )
-                _weeklyWeatherData.value = WeeklyResult.Result(weeklyForecast, place, date)
+                _weeklyWeatherData.value = WeeklyResult(weeklyForecast, place)
                 }
             }catch (e: Exception){
                 e.printStackTrace()
