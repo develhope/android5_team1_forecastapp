@@ -1,5 +1,7 @@
 package co.develhope.meteoapp.ui.error
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -37,5 +39,21 @@ private lateinit var binding : ErrorScreenBinding
         binding.retryButton.setOnClickListener {
             findNavController().popBackStack()
         }
+        if (!isInternetConnected()) {
+
+            binding.errorImage.visibility = View.VISIBLE
+            binding.errorMessage.visibility = View.VISIBLE
+            binding.retryButton.visibility = View.VISIBLE
+        } else {
+
+            binding.errorImage.visibility = View.GONE
+            binding.errorMessage.visibility = View.GONE
+            binding.retryButton.visibility = View.GONE
+        }
+    }
+    private fun isInternetConnected(): Boolean {
+        val connectivityManager =
+            context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+        return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting ?: false
     }
 }
