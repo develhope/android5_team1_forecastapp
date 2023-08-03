@@ -10,6 +10,7 @@ import android.location.Location
 import android.location.LocationManager
 import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
@@ -42,6 +43,7 @@ object Geolocalization {
                             city = getCity(lat = location.latitude, log = location.longitude, context = context),
                             region = getCountry(lat = location.longitude, log = location.longitude, context = context)
                         )
+                        Log.d("geo", "localization active")
                         MyApplicationMeteo.preferences?.savePrefPlace(place)
                     }
                 }

@@ -1,6 +1,7 @@
 package co.develhope.meteoapp
 
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.databinding.ActivityMainBinding
 import co.develhope.meteoapp.network.service.geopermission.Geolocalization
 import com.google.android.gms.common.ConnectionResult
@@ -23,8 +25,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         getGeolocalization()
+
+        //val pref = MyApplicationMeteo.preferences?.prefPlace!!
+        //val place = Place("Palermo","Sicilia", 38.13205, 13.33561)
+
+                ////// }
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
