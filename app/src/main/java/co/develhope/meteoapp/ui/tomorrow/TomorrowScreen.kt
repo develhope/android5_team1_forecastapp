@@ -11,7 +11,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.databinding.TodayScreenBinding
-import co.develhope.meteoapp.databinding.TomorrowScreenBinding
 import co.develhope.meteoapp.data.local.HourlyForecast
 import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.data.local.TodayInfo

@@ -142,8 +142,8 @@
         android:id="@+id/prossimi_5_"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="42dp"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginTop="28dp"
         android:text="@string/prossimi_5"
         android:textAppearance="@style/prossimi_5"
         />
