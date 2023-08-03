@@ -1,20 +1,17 @@
 package co.develhope.meteoapp.ui.tomorrow
 
-import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.databinding.TodayScreenBinding
 import co.develhope.meteoapp.data.local.HourlyForecast
 import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.data.local.TodayInfo
-import co.develhope.meteoapp.network.remote.ForecastData
+import co.develhope.meteoapp.databinding.TodayScreenBinding
 import co.develhope.meteoapp.ui.today.TodayTomorrowInfoAdapter
 import org.threeten.bp.OffsetDateTime
 

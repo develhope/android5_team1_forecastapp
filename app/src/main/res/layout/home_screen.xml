@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutAnimation="@anim/reciclerview_animation"
     android:orientation="vertical"
     android:overScrollMode="always"
     tools:context=".ui.home.HomeScreen"
     android:background="@drawable/home_background">
+
 
     <TextView
         android:id="@+id/city_name"
@@ -34,18 +36,18 @@
             android:layout_column="0"
             android:layout_marginBottom="18dp"
             android:orientation="vertical">
-        <TextView
-            android:id="@+id/home_screen_day_of_week"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/oggi"
-            android:textAppearance="@style/home_info_big" />
-        <TextView
-            android:id="@+id/home_screen_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/data"
-            android:textAppearance="@style/home_info_small" />
+            <TextView
+                android:id="@+id/home_screen_day_of_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/oggi"
+                android:textAppearance="@style/home_info_big" />
+            <TextView
+                android:id="@+id/home_screen_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data"
+                android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -54,18 +56,18 @@
             android:layout_row="0"
             android:layout_column="1"
             android:orientation="vertical">
-        <TextView
-            android:id="@+id/home_screen_temp_min"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tempmin"
-            android:textAppearance="@style/home_info_big" />
-          
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_temp_min"
-            android:textAppearance="@style/home_info_small" />
+            <TextView
+                android:id="@+id/home_screen_temp_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tempmin"
+                android:textAppearance="@style/home_info_big" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_temp_min"
+                android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,17 +76,17 @@
             android:layout_row="0"
             android:layout_column="2"
             android:orientation="vertical">
-        <TextView
-            android:id="@+id/home_screen_temp_max"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tempmax"
-            android:textAppearance="@style/home_info_big" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/text_temp_max"
-            android:textAppearance="@style/home_info_small" />
+            <TextView
+                android:id="@+id/home_screen_temp_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tempmax"
+                android:textAppearance="@style/home_info_big" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_temp_max"
+                android:textAppearance="@style/home_info_small" />
         </LinearLayout>
 
         <LinearLayout
@@ -114,6 +116,7 @@
             android:layout_column="1"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/home_screen_rain_sum"
                 android:layout_width="wrap_content"
@@ -127,6 +130,7 @@
                 android:textAppearance="@style/home_info_small" />
 
         </LinearLayout>
+
         <ImageView
             android:id="@+id/weathercode_icon"
             android:src="@drawable/sun"
@@ -138,6 +142,7 @@
             />
     </GridLayout>
 
+
     <TextView
         android:id="@+id/prossimi_5_"
         android:layout_width="wrap_content"
@@ -148,11 +153,14 @@
         android:textAppearance="@style/prossimi_5"
         />
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_list"
         android:layout_marginVertical="@dimen/_24dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/weather_info_home" />
+
+
 
 </LinearLayout>

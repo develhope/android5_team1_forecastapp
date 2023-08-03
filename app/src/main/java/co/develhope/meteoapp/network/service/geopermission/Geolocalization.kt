@@ -8,9 +8,12 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
+import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.startActivity
 import co.develhope.meteoapp.MyApplicationMeteo
@@ -30,16 +33,6 @@ object Geolocalization {
 
         if(checkPermission(context)) {
             if(isLocationEnabled(context)) {
-                if(ActivityCompat.checkSelfPermission(
-                        context,
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                    ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                        context,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    return
-                }
                 fusedLocationProvideClient.lastLocation.addOnCompleteListener() {
                     val location: Location? = it.result
                     if(location != null) {
@@ -50,6 +43,7 @@ object Geolocalization {
                             city = getCity(lat = location.latitude, log = location.longitude, context = context),
                             region = getCountry(lat = location.longitude, log = location.longitude, context = context)
                         )
+                        Log.d("geo", "localization active")
                         MyApplicationMeteo.preferences?.savePrefPlace(place)
                     }
                 }
@@ -62,12 +56,12 @@ object Geolocalization {
             requestPermission(context, PERMISSION_REQUEST_ACCESS_LOCATION)
         }
     }
-    private fun requestPermission(context: Context, PERMISSION_REQUEST_ACCESS_LOCATION:Int) {
+    private fun requestPermission(context: Context, permission: Int) {
         ActivityCompat.requestPermissions(
             context as Activity, arrayOf(
-                android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            ),PERMISSION_REQUEST_ACCESS_LOCATION
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ), permission
         )
     }
 
@@ -91,10 +85,10 @@ object Geolocalization {
     private fun checkPermission(context: Context): Boolean {
         return ActivityCompat.checkSelfPermission(
             context,
-            android.Manifest.permission.ACCESS_COARSE_LOCATION
+            Manifest.permission.ACCESS_COARSE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
             context,
-            android.Manifest.permission.ACCESS_FINE_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED
     }
     private fun isLocationEnabled(context: Context): Boolean {

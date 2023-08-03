@@ -2,7 +2,9 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/weather_info_container"
     android:layout_width="match_parent"
+    android:layoutAnimation="@anim/reciclerview_animation"
     android:layout_height="wrap_content">
+
 
     <GridLayout
         android:id="@+id/frame"
@@ -120,6 +122,7 @@
             android:layout_row="1"
             android:layout_column="0"
             android:maxWidth="126dp"/>
+
     </GridLayout>
 
 </FrameLayout>
