@@ -42,8 +42,15 @@ class MainActivity : AppCompatActivity() {
 
         }
     }
-
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+    fun showBottomNavigation(view: Boolean) {
+        if (view) {
+            binding.bottomNavigationMenu.visibility = View.VISIBLE
+        } else {
+            binding.bottomNavigationMenu.visibility = View.GONE
+        }
+    }
+
 }
