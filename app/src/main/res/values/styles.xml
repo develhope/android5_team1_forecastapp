@@ -55,7 +55,7 @@
         <item name="android:fontFamily">@font/inter</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#230EA5</item>
-        <item name="android:textStyle">normal</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="today_tomorrow_item_number">
