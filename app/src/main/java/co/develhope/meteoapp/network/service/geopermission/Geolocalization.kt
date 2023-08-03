@@ -62,12 +62,12 @@ object Geolocalization {
             requestPermission(context, PERMISSION_REQUEST_ACCESS_LOCATION)
         }
     }
-    private fun requestPermission(context: Context, PERMISSION_REQUEST_ACCESS_LOCATION:Int) {
+    private fun requestPermission(context: Context, permission: Int) {
         ActivityCompat.requestPermissions(
             context as Activity, arrayOf(
-                android.Manifest.permission.ACCESS_COARSE_LOCATION,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            ),PERMISSION_REQUEST_ACCESS_LOCATION
+                Manifest.permission.ACCESS_COARSE_LOCATION,
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ), permission
         )
     }
 
@@ -91,10 +91,10 @@ object Geolocalization {
     private fun checkPermission(context: Context): Boolean {
         return ActivityCompat.checkSelfPermission(
             context,
-            android.Manifest.permission.ACCESS_COARSE_LOCATION
+            Manifest.permission.ACCESS_COARSE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
             context,
-            android.Manifest.permission.ACCESS_FINE_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION
         ) == PackageManager.PERMISSION_GRANTED
     }
     private fun isLocationEnabled(context: Context): Boolean {
