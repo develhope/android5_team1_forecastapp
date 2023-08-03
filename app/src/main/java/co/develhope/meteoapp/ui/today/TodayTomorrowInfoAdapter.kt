@@ -11,6 +11,9 @@ import co.develhope.meteoapp.databinding.SpecificDayBinding
 import co.develhope.meteoapp.data.local.TodayInfo
 import co.develhope.meteoapp.utils.getLocalizedDay
 import co.develhope.meteoapp.utils.getLocalizedMonth
+import org.threeten.bp.OffsetDateTime
+import org.threeten.bp.format.TextStyle
+import java.util.Locale
 
 class TodayTomorrowInfoAdapter(private val todayInfo : List<TodayInfo>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun getItemViewType(position: Int): Int {
@@ -29,13 +32,14 @@ class TodayTomorrowInfoAdapter(private val todayInfo : List<TodayInfo>) : Recycl
                 info.place.region
             )
             binding.dateSpecificDay.text = itemView.context.getString(
-                R.string.today_details, getLocalizedDay(
-                    info.date.dayOfWeek.name
-                ),
+                R.string.today_details,
+                info.date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() },
                 info.date.dayOfMonth.toString(),
-                getLocalizedMonth(info.date.month.name)
+                info.date.month.getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
             )
-
+            if (info.date.dayOfMonth == OffsetDateTime.now().dayOfMonth) {
+                binding.todayText.text = itemView.context.getString(R.string.Oggi)
+            } else  binding.todayText.text = itemView.context.getString(R.string.Domani)
         }
     }
 class HourlyInfoViewHolder(private val binding: ItemTodayScreenBinding) :

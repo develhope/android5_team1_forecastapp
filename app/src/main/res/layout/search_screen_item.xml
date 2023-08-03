@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/search_item"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_66dp"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/_60dp"
     android:orientation="vertical"
     android:padding="@dimen/_16dp"
     android:layout_marginVertical="@dimen/_8dp"
@@ -16,20 +17,6 @@
             android:layout_centerVertical="true"
             android:text="@string/city_search_item"
             android:textAppearance="@style/search_item_big"/>
-<!--        <TextView-->
-<!--            android:id="@+id/search_item_temp"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:text="@string/temp_search_item"-->
-<!--            android:textAppearance="@style/search_item_big"/>-->
-<!--        <TextView-->
-<!--            android:id="@+id/search_item_weather"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:text="@string/weather_search_item"-->
-<!--            android:textAppearance="@style/search_item_small"/>-->
+
 
 </RelativeLayout>

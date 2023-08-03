@@ -35,7 +35,7 @@
     <string name="some_id4">45°</string>
     <string name="indice_uv">Indice UV</string>
     <string name="some_id5">5/10</string>
-    <string name="umidit_">Umidità</string>
+    <string name="umidita">Umidita</string>
     <string name="some_id6">60%</string>
     <string name="vento">Vento</string>
     <string name="sse_7km_h">SSE 7km/h</string>
@@ -56,7 +56,7 @@
     <!---string card titles-->
     <string name="sp_percepita">Percepita</string>
     <string name="sp_UV">Indice UV</string>
-    <string name="sp_umidita">Umidità</string>
+    <string name="sp_umidita">Umidita</string>
     <string name="sp_vento">Vento</string>
     <string name="copertura2">Copertura</string>
     <string name="pioggia2">Pioggia</string>
@@ -83,6 +83,7 @@
     <string name="temp_search_item">Err°</string>
     <string name="weather_search_item">unknown</string>
     <string name="recent_search">Ricerche recenti</string>
+    <string name="search_hint">Cerca città</string>
 
 
     <!-- ENG VERSION -->

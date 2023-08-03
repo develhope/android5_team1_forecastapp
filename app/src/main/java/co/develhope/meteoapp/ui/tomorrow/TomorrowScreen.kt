@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import co.develhope.meteoapp.databinding.TodayScreenBinding
 import co.develhope.meteoapp.data.local.HourlyForecast
 import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.data.local.TodayInfo

@@ -16,8 +16,8 @@
         android:id="@+id/home_screen_second_part"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="@dimen/_10dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="6dp"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingVertical="5dp">
@@ -26,9 +26,8 @@
             android:id="@+id/hourTextView"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_7dp"
-            android:layout_marginBottom="@dimen/_7dp"
-            android:textAppearance="@style/some_id" />
+            android:layout_marginVertical="@dimen/_4dp"
+            android:textAppearance="@style/today_tomorrow_hour" />
 
         <ImageView
             android:id="@+id/weatherImageView"
@@ -44,18 +43,15 @@
             android:text="@string/temp"
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:textAppearance="@style/some_id2"
-            android:textStyle="bold" />
+            android:layout_marginVertical="@dimen/_4dp"
+            android:textAppearance="@style/today_tomorrow_item_number" />
 
         <ImageView
             android:id="@+id/humidityImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginVertical="@dimen/_4dp"
             android:src="@drawable/fluent_drop_16_filled" />
 
         <TextView
@@ -63,11 +59,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginVertical="@dimen/_4dp"
             android:text="@string/some_id3"
-            android:textStyle="bold"
-            android:textAppearance="@style/some_id2" />
+            android:textAppearance="@style/today_tomorrow_item_number" />
 
         <ImageView
             android:id="@+id/arrow"
@@ -84,8 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bottom_line"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="@dimen/_10dp"
+        android:layout_marginHorizontal="@dimen/_10dp"
         android:src="@drawable/baseline_today_screen" />
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -97,12 +90,7 @@
             android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:paddingBottom="30dp"
-            android:elevation="8dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="45dp"
+            android:layout_margin="@dimen/_24dp"
             app:cardCornerRadius="8dp"
             android:visibility="gone">
             <GridLayout
@@ -121,58 +109,49 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="@dimen/_18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/temp_percepita"
-                            android:layout_width="wrap_content"
+                            android:layout_width="146dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginTop="18dp"
                             android:text="@string/percepita"
-                            android:textAppearance="@style/percepita" />
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/percepitaTextView"
-                            android:layout_width="25dp"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="14dp"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginEnd="151dp"
-                            android:textAppearance="@style/some_id4" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="@dimen/_18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/indice"
-                            android:layout_width="69dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="18dp"
-                            android:layout_marginEnd="75dp"
-                            android:layout_marginBottom="1dp"
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
                             android:text="@string/indice_uv"
-                            android:textAppearance="@style/indice_uv" />
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/indiceTextView"
-                            android:layout_width="35dp"
-                            android:layout_height="19dp"
-                            android:layout_marginEnd="109dp"
-                            android:layout_marginBottom="14dp"
-                            android:textAppearance="@style/some_id5" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
                     </LinearLayout>
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="303.5dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="18.5dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
                     android:background="@drawable/bottom_line"
                     android:layout_column="0"
                     android:layout_row="1"
@@ -187,61 +166,50 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/humidity"
-                            android:layout_width="55dp"
-                            android:layout_height="18dp"
-                            android:layout_marginStart="18dp"
-                            android:layout_marginEnd="125dp"
-                            android:layout_marginTop="14dp"
-                            android:layout_marginBottom="4dp"
-                            android:text="@string/umidit_"
-                            android:textAppearance="@style/umidit_" />
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/umidita"
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/humidityPercentage"
-                            android:layout_marginStart="18dp"
-                            android:layout_width="35dp"
-                            android:layout_height="19dp"
-                            android:layout_marginEnd="72.5dp"
-                            android:layout_marginBottom="19dp"
-                            android:textAppearance="@style/some_id6" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="@dimen/_18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/vento"
-                            android:layout_width="wrap_content"
+                            android:layout_width="146dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="14dp"
-                            android:layout_marginEnd="102dp"
-                            android:layout_marginBottom="4dp"
                             android:text="@string/vento"
-                            android:textAppearance="@style/vento" />
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/ventoTextView"
-                            android:layout_width="84dp"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="14dp"
-                            android:layout_marginEnd="60dp"
-                            android:textAppearance="@style/sse_7km_h" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
                     </LinearLayout>
 
 
                 </LinearLayout>
                 <ImageView
-                    android:layout_width="303.5dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bottom_line"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="18.5dp"
+                    android:layout_marginHorizontal="@dimen/_20dp"
                     android:layout_column="0"
                     android:layout_row="3"
                     />
@@ -254,60 +222,45 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/copertura"
-                            android:layout_width="73dp"
-                            android:layout_height="18dp"
-                            android:layout_marginTop="9dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginEnd="107dp"
-                            android:layout_marginBottom="4dp"
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
                             android:text="@string/copertura"
-                            android:textAppearance="@style/copertura" />
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/coperturaTextView"
-                            android:layout_width="34dp"
-                            android:layout_height="19dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginEnd="146dp"
-                            android:layout_marginBottom="19dp"
-                            android:textAppearance="@style/some_id7" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:padding="@dimen/_18dp"
                         android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/pioggia"
-                            android:layout_marginTop="9dp"
-                            android:layout_marginEnd="89dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_width="53dp"
-                            android:layout_height="18dp"
+                            android:layout_width="146dp"
+                            android:layout_height="wrap_content"
                             android:text="@string/pioggia"
-                            android:textAppearance="@style/pioggia" />
+                            android:textAppearance="@style/today_tomorrow_card_info_title" />
 
                         <TextView
                             android:id="@+id/pioggiaTextView"
-                            android:layout_marginEnd="89dp"
-                            android:layout_marginBottom="19dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/cm" />
+                            android:textAppearance="@style/today_tomorrow_card_info_number" />
 
                     </LinearLayout>
-
-
                 </LinearLayout>
-
             </GridLayout>
-
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 </LinearLayout>

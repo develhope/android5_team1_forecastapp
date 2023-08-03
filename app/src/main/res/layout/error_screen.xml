@@ -23,8 +23,7 @@
         android:layout_marginTop="@dimen/_15dp"
         android:gravity="center"
         android:text="@string/error_message"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_17sp" />
+        android:textAppearance="@string/error_message"/>
 
     <Button
         android:id="@+id/retry_button"
@@ -36,6 +35,7 @@
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginEnd="@dimen/_24dp"
         android:text="@string/Riprova"
+        android:textAppearance="@style/error_retry"
         android:paddingStart="@dimen/_60dp"
         android:paddingEnd="@dimen/_60dp"/>
 

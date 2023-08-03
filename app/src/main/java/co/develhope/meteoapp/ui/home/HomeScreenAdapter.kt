@@ -23,7 +23,8 @@ class HomeScreenAdapter(val list: WeeklyResult) : RecyclerView.Adapter<HomeScree
             binding.weatherInfoRain.text = item.list[position + 1].rain.toString().plus("mm")
             binding.weatherInfoIcon.setImageResource(item.list[position + 1].weatherType.imageWeatherType())
             binding.weatherInfoDate.text = item.list[position + 1].date.dayOfMonth.toString().plus("/").plus(item.list[position + 1].date.monthValue.toString())
-            binding.weatherInfoWeekday.text = item.list[position + 1].date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
+            if(position == 0) { binding.weatherInfoWeekday.text = itemView.context.getString(R.string.Domani)
+            } else binding.weatherInfoWeekday.text = item.list[position + 1].date.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.ITALY).replaceFirstChar { it.uppercase() }
         }
     }
 
