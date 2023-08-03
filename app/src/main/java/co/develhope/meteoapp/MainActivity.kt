@@ -2,6 +2,7 @@ package co.develhope.meteoapp
 
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -10,6 +11,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import co.develhope.meteoapp.databinding.ActivityMainBinding
 import co.develhope.meteoapp.network.service.geopermission.Geolocalization
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Geolocalization.getCurrentPosition(this)
+        getGeolocalization()
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
@@ -41,7 +44,28 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigationMenu.setOnItemReselectedListener {
 
         }
+
     }
+    private fun getGeolocalization() {
+        if (isGooglePlayServicesAvailable()) {
+            try {
+                Geolocalization.getCurrentPosition(this)
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        } else {
+            Log.d(
+                "MainActivity", "Error"
+            )
+        }
+    }
+    private fun isGooglePlayServicesAvailable(): Boolean {
+        val apiAvailability = GoogleApiAvailability.getInstance()
+        val resultCode = apiAvailability.isGooglePlayServicesAvailable(this)
+        return resultCode == ConnectionResult.SUCCESS
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }

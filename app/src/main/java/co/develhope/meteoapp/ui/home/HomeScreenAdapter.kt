@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import co.develhope.meteoapp.R
 import co.develhope.meteoapp.data.local.WeatherSummary
+import co.develhope.meteoapp.data.local.WeatherType
 import co.develhope.meteoapp.databinding.WeatherInfoHomeBinding
 import co.develhope.meteoapp.network.remote.WeeklySummary
 import org.threeten.bp.DayOfWeek
