@@ -19,5 +19,7 @@ private lateinit var binding : ErrorScreenBinding
     ): View {
         binding = ErrorScreenBinding.inflate(inflater, container, false)
         return binding.root
+
+        val screen = activity?.window
     }
 }

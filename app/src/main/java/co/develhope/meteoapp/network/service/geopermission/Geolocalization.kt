@@ -8,9 +8,11 @@ import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
+import android.os.Build
 import android.provider.Settings
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.startActivity
 import co.develhope.meteoapp.MyApplicationMeteo
@@ -30,16 +32,6 @@ object Geolocalization {
 
         if(checkPermission(context)) {
             if(isLocationEnabled(context)) {
-                if(ActivityCompat.checkSelfPermission(
-                        context,
-                        Manifest.permission.ACCESS_FINE_LOCATION
-                    ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                        context,
-                        Manifest.permission.ACCESS_COARSE_LOCATION
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    return
-                }
                 fusedLocationProvideClient.lastLocation.addOnCompleteListener() {
                     val location: Location? = it.result
                     if(location != null) {
