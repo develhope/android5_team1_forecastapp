@@ -15,6 +15,7 @@ import org.threeten.bp.OffsetDateTime
 sealed class TodayResult() {
     data class Result(val list: List<HourlyForecast>, val place: Place, val date: OffsetDateTime) :
         TodayResult()
+    data class Error(val e: Exception): TodayResult()
 }
 class TodayScreenViewModel : ViewModel() {
     private val api = NetworkProvider().weatherAPI
@@ -37,7 +38,7 @@ class TodayScreenViewModel : ViewModel() {
                     _todayResult.value = TodayResult.Result(todayHourlyForecast, place, date)
                 }
             }catch (e: Exception) {
-                e.printStackTrace()
+                e.message?.let { TodayResult.Error(e) }?.let { _todayResult.value = it }
             }
         }
     }

@@ -16,7 +16,7 @@ import co.develhope.meteoapp.databinding.ErrorScreenBinding
 
 class ErrorScreen: Fragment() {
 
-private lateinit var binding : ErrorScreenBinding
+    private lateinit var binding: ErrorScreenBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,6 +26,7 @@ private lateinit var binding : ErrorScreenBinding
         binding = ErrorScreenBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -39,7 +40,7 @@ private lateinit var binding : ErrorScreenBinding
         binding.retryButton.setOnClickListener {
             findNavController().popBackStack()
         }
-        if (!isInternetConnected()) {
+        /* if (!isInternetConnected()) {
 
             binding.errorImage.visibility = View.VISIBLE
             binding.errorMessage.visibility = View.VISIBLE
@@ -50,10 +51,11 @@ private lateinit var binding : ErrorScreenBinding
             binding.errorMessage.visibility = View.GONE
             binding.retryButton.visibility = View.GONE
         }
-    }
-    private fun isInternetConnected(): Boolean {
+    }*/
+        /*private fun isInternetConnected(): Boolean {
         val connectivityManager =
             context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
         return connectivityManager?.activeNetworkInfo?.isConnectedOrConnecting ?: false
+    }*/
     }
 }

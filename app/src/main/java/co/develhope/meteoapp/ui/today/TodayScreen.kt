@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.develhope.meteoapp.databinding.TodayScreenBinding
 import co.develhope.meteoapp.data.local.HourlyForecast
 import co.develhope.meteoapp.data.local.Place
 import co.develhope.meteoapp.data.local.TodayInfo
 import co.develhope.meteoapp.network.remote.ForecastData
+import kotlinx.coroutines.launch
 import org.threeten.bp.OffsetDateTime
 
 
@@ -34,27 +36,31 @@ class TodayScreen : Fragment() {
         binding.recyclerView.layoutManager = LinearLayoutManager(view.context)
         adapter = TodayTomorrowInfoAdapter(emptyList())
         binding.recyclerView.adapter = adapter
+        getHourlyInfo()
+        viewModel.getTodayWeather()
     }
 
     override fun onStart() {
         super.onStart()
-        viewModel.getTodayWeather()
-        getHourlyInfo()
     }
 
 
     private fun getHourlyInfo() {
-        viewModel.todayResult.observe(viewLifecycleOwner) {
-            when (it) {
-                is TodayResult.Result -> {
-                    val filteredList = it.list.filter { hourlyForecast ->
-                        hourlyForecast.hourlySpecificDay.time.isAfter(OffsetDateTime.now())
+        lifecycleScope.launch {
+            viewModel.todayResult.observe(viewLifecycleOwner) {
+                when (it) {
+                    is TodayResult.Result -> {
+                        val filteredList = it.list.filter { hourlyForecast ->
+                            hourlyForecast.hourlySpecificDay.time.isAfter(OffsetDateTime.now())
+                        }
+
+                        val specificDayItems =
+                            createListToShowSpecificDay(filteredList, it.place, it.date)
+                        adapter = TodayTomorrowInfoAdapter(specificDayItems)
+                        binding.recyclerView.adapter = adapter
                     }
 
-                    val specificDayItems =
-                        createListToShowSpecificDay(filteredList, it.place, it.date)
-                    adapter = TodayTomorrowInfoAdapter(specificDayItems)
-                    binding.recyclerView.adapter = adapter
+                    is TodayResult.Error -> view?.let {it1 -> co.develhope.meteoapp.utils.error(it1) }
                 }
             }
         }
