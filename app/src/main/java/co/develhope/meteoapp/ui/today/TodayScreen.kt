@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import co.develhope.meteoapp.MainActivity
+import co.develhope.meteoapp.R
 import co.develhope.meteoapp.databinding.TodayScreenBinding
 import co.develhope.meteoapp.data.local.HourlyForecast
 import co.develhope.meteoapp.data.local.Place
@@ -33,6 +35,13 @@ class TodayScreen : Fragment() {
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val window = activity?.window
+        if (window != null) {
+            (activity as MainActivity).showBottomNavigation(true)
+            window.statusBarColor = context?.getColor(R.color.app_background) ?: 0
+
+        }
+
         binding.recyclerView.layoutManager = LinearLayoutManager(view.context)
         adapter = TodayTomorrowInfoAdapter(emptyList())
         binding.recyclerView.adapter = adapter

@@ -32,7 +32,7 @@ class ErrorScreen: Fragment() {
 
         val screen = activity?.window
         if (screen != null) {
-            (activity as MainActivity).showBottomNavigation(false)
+            (activity as MainActivity).showBottomNavigation(true)
             screen.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
             screen.statusBarColor = context?.getColor(R.color.app_background)!!
 
